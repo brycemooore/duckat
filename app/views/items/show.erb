@@ -17,12 +17,7 @@
         <% end %>
     <% end %>
 </h3>
-<h2><%= @item.name %></h2>
-<h2><%= @item.description %></h2>
-<h2><%= @item.display_asking_price %></h2>
-<h2><%= @item.end_date %></h2>
-
-<%= if @item.tags.any? %>
+<% if @item.tags.any? %>
     <h2>Tags</h2>
     <% @item.tags.each do |tag| %>
         <%= tag.name %>

@@ -1,7 +1,16 @@
 <h1>Items</h1>
+<%= form_tag items_path, method: "GET" do %>
+    <%= label_tag :list, "All"%>
+    <%= radio_button_tag :list, "all"%>
+    <%= label_tag :list, "For Sale"%>
+    <%= radio_button_tag :list, "sale"%>
+    <%= label_tag :list, "My Items For Sale"%>
+    <%= radio_button_tag :list, "selling"%>
+    <%= submit_tag "Display Items"%>
+<% end %>
 
 <ul>
-<% @items.each do |item| %>
-    <li><%= link_to item.name, item_path(item) %></li>
-<% end %>
+    <% @items.each do |item| %>
+        <li><%= link_to item.name, item_path(item) %></li>
+    <% end %>
 </ul>

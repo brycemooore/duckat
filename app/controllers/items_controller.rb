@@ -1,12 +1,18 @@
 class ItemsController < ApplicationController
     def index
-        @items = Item.all
+        case params[:list]
+        when "sale"
+            @items = Item.where.not seller_id: current_user.id
+        when "selling"
+            @items = Item.where seller_id: current_user.id
+        else
+            @items = Item.all
+        end
     end
 
     def show
         @item = Item.find(params[:id])
         @bid = Bid.new
-        if 
     end
 
     def new
@@ -23,9 +29,13 @@ class ItemsController < ApplicationController
     end
 
     def edit
+        @item = Item.find(params[:id])
     end
 
     def update
+        @item = Item.find(params[:id])
+        @item.update(item_params)
+        redirect_to item_path(@item)
     end
 
     def destroy

@@ -1,12 +1,12 @@
 <nav>
     <%= link_to 'Home', home_path %> |
     <%= link_to "Login", login_form_path %> | 
-    <%= link_to "Items", items_path %> | 
-    <%= link_to "New Item", new_item_path %> |
-    <%= link_to "Your Bids", bids_path %> 
+    <%= link_to "Items", items_path %>
     <% if !!current_user %>
         |
         <%= link_to "Profile", user_path(current_user.id) %> |
-        <%= link_to "Logout", logout_path %>
+        <%= link_to "Logout", logout_path %> | 
+        <%= link_to "New Item", new_item_path %> |
+        <%= link_to "Your Bids", bids_path %> 
     <% end %>
 </nav> 
