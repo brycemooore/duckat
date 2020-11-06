@@ -17,7 +17,7 @@ class BidsController < ApplicationController
     if @bid.save
       redirect_to bid_path(@bid)
     else
-      render :new
+      redirect_to item_path(@bid.item_id)
     end
   end
 
