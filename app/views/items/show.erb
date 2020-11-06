@@ -1,6 +1,19 @@
 <h1>Item Details</h1>
 
-<h2><%= @item.name %></h2>
-<h2><%= @item.description %></h2>
-<h2><%= @item.asking_price %></h2>
-<h2><%= @item.end_date %></h2>
+<h2>Name: <%= @item.name %></h2>
+<h2>Description: <%= @item.description %></h2>
+<h2>Price: $<%= @item.asking_price %>0</h2>
+<h2>Auction Closes: <%= @item.end_date %></h2>
+<h3>
+    <% if @item.seller_id == current_user.id  %>
+        <%= button_tag "MY ITEM"%>
+    <% else %>
+        <%= form_for @bid, method: :post do |f| %>
+            <%= f.label :bid_amount,"Place Bid:" %>
+            <%= f.number_field :bid_amount %>
+            <%= f.hidden_field :user_id, value: current_user.id %>
+            <%= f.hidden_field :item_id, value: @item.id %>
+            <%= f.submit %>
+        <% end %>
+    <% end %>
+</h3>
