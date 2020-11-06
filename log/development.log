@@ -752,3 +752,429 @@ Processing by ItemsController#index as HTML
 Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 4042)
 
 
+Started GET "/items" for ::1 at 2020-11-06 12:53:37 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  Rendered items/index.erb within layouts/application (Duration: 0.7ms | Allocations: 183)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 8486)
+
+
+Started GET "/items/new" for ::1 at 2020-11-06 13:25:21 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered items/new.erb within layouts/application (Duration: 1167.8ms | Allocations: 884980)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1197ms (Views: 1178.9ms | ActiveRecord: 0.6ms | Allocations: 898879)
+
+
+Started GET "/items/new" for ::1 at 2020-11-06 13:25:39 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered items/new.erb within layouts/application (Duration: 3.1ms | Allocations: 950)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 5991)
+
+
+Started GET "/items/new" for ::1 at 2020-11-06 13:26:35 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered items/new.erb within layouts/application (Duration: 1.8ms | Allocations: 941)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 5973)
+
+
+Started GET "/items/new" for ::1 at 2020-11-06 13:26:56 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered items/new.erb within layouts/application (Duration: 2.3ms | Allocations: 911)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 5936)
+
+
+Started GET "/items/new" for ::1 at 2020-11-06 13:27:54 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered items/new.erb within layouts/application (Duration: 10.1ms | Allocations: 3471)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 8398)
+
+
+Started GET "/items/new" for ::1 at 2020-11-06 13:28:11 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered items/new.erb within layouts/application (Duration: 3.7ms | Allocations: 2410)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 3666)
+
+
+  
+ActionView::Template::Error (undefined method `+' for :asking_price:Symbol):
+    13:     <%= f.text_field :name %><br>
+    14:     <%= f.label :description %><br>
+    15:     <%= f.text_field :description %><br>
+    16:     <%= f.label :asking_price + " $" %><br>
+    17:     <%= f.number_field :asking_price %><br>
+    18:     <%=%><br>
+    19:     <%= f.submit "Add Item"%>
+  
+app/views/items/new.erb:16
+app/views/items/new.erb:11
+Started GET "/" for ::1 at 2020-11-06 13:28:22 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/jakeshort/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/jakeshort/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.6ms | Allocations: 196)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 1062)
+
+
+Started GET "/items/new" for ::1 at 2020-11-06 13:28:25 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered items/new.erb within layouts/application (Duration: 2.8ms | Allocations: 1205)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 6804)
+
+
+Started GET "/items/new" for ::1 at 2020-11-06 13:29:32 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered items/new.erb within layouts/application (Duration: 43.8ms | Allocations: 3910)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 50.9ms | ActiveRecord: 0.0ms | Allocations: 8847)
+
+
+Started POST "/items" for ::1 at 2020-11-06 13:59:04 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"dmsEpwQ7FM2JVNrItdyK9DhLfW8lF9tN0U3mBTZWoIHMVPpfjTzRAG3GCXG5n5p/BnnVh//WrU1KA0n1cSGaxw==", "item"=>{"name"=>"Duck 1", "description"=>"one duck", "asking_price"=>"50", "end_date"=>"2021-01-01"}, "commit"=>"Add Item"}
+  Rendering items/new.erb within layouts/application
+  Rendered items/new.erb within layouts/application (Duration: 4.8ms | Allocations: 1191)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 10440)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started POST "/items" for ::1 at 2020-11-06 14:02:46 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/jakeshort/Desktop/Flatiron/duckat/app/controllers/items_controller.rb:39: syntax error, unexpected ',', expecting =>
+            :asking_price,
+                         ^
+/Users/jakeshort/Desktop/Flatiron/duckat/app/controllers/items_controller.rb:41: syntax error, unexpected ')', expecting end
+        )
+        ^):
+  
+app/controllers/items_controller.rb:39: syntax error, unexpected ',', expecting =>
+app/controllers/items_controller.rb:41: syntax error, unexpected ')', expecting end
+app/controllers/items_controller.rb:39: syntax error, unexpected ',', expecting =>
+app/controllers/items_controller.rb:41: syntax error, unexpected ')', expecting end
+app/controllers/items_controller.rb:39: syntax error, unexpected ',', expecting =>
+app/controllers/items_controller.rb:41: syntax error, unexpected ')', expecting end
+Started GET "/items" for ::1 at 2020-11-06 14:02:52 -0500
+  
+SyntaxError (/Users/jakeshort/Desktop/Flatiron/duckat/app/controllers/items_controller.rb:39: syntax error, unexpected ',', expecting =>
+            :asking_price,
+                         ^
+/Users/jakeshort/Desktop/Flatiron/duckat/app/controllers/items_controller.rb:41: syntax error, unexpected ')', expecting end
+        )
+        ^):
+  
+app/controllers/items_controller.rb:39: syntax error, unexpected ',', expecting =>
+app/controllers/items_controller.rb:41: syntax error, unexpected ')', expecting end
+app/controllers/items_controller.rb:39: syntax error, unexpected ',', expecting =>
+app/controllers/items_controller.rb:41: syntax error, unexpected ')', expecting end
+app/controllers/items_controller.rb:39: syntax error, unexpected ',', expecting =>
+app/controllers/items_controller.rb:41: syntax error, unexpected ')', expecting end
+Started GET "/items/new" for ::1 at 2020-11-06 14:03:38 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/jakeshort/Desktop/Flatiron/duckat/app/controllers/items_controller.rb:15: syntax error, unexpected =>, expecting end
+        @item = Item.new => :seller_id => User.all.sampl...
+                         ^~
+/Users/jakeshort/Desktop/Flatiron/duckat/app/controllers/items_controller.rb:15: syntax error, unexpected '\n', expecting '='):
+  
+app/controllers/items_controller.rb:15: syntax error, unexpected =>, expecting end
+app/controllers/items_controller.rb:15: syntax error, unexpected '\n', expecting '='
+app/controllers/items_controller.rb:15: syntax error, unexpected =>, expecting end
+app/controllers/items_controller.rb:15: syntax error, unexpected '\n', expecting '='
+app/controllers/items_controller.rb:15: syntax error, unexpected =>, expecting end
+app/controllers/items_controller.rb:15: syntax error, unexpected '\n', expecting '='
+Started GET "/items" for ::1 at 2020-11-06 14:04:53 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/jakeshort/Desktop/Flatiron/duckat/app/controllers/items_controller.rb:15: syntax error, unexpected ')', expecting =>
+...ser.all.sample.id, item_params)
+...                              ^):
+  
+app/controllers/items_controller.rb:15: syntax error, unexpected ')', expecting =>
+app/controllers/items_controller.rb:15: syntax error, unexpected ')', expecting =>
+app/controllers/items_controller.rb:15: syntax error, unexpected ')', expecting =>
+Started GET "/items" for ::1 at 2020-11-06 14:05:07 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/jakeshort/Desktop/Flatiron/duckat/app/controllers/items_controller.rb:15: syntax error, unexpected ')', expecting =>
+...ser.all.sample.id, item_params)
+...                              ^):
+  
+app/controllers/items_controller.rb:15: syntax error, unexpected ')', expecting =>
+app/controllers/items_controller.rb:15: syntax error, unexpected ')', expecting =>
+app/controllers/items_controller.rb:15: syntax error, unexpected ')', expecting =>
+Started GET "/items" for ::1 at 2020-11-06 14:06:45 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  Rendered items/index.erb within layouts/application (Duration: 0.2ms | Allocations: 72)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 6681)
+
+
+Started GET "/items/new" for ::1 at 2020-11-06 14:06:47 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered items/new.erb within layouts/application (Duration: 185.4ms | Allocations: 75536)
+Completed 500 Internal Server Error in 197ms (ActiveRecord: 0.9ms | Allocations: 81710)
+
+
+  
+ActionView::Template::Error (undefined method `hidden' for #<ActionView::Helpers::FormBuilder:0x00007fe49ae34050>):
+    11: <%= form_for @item do |f| %>
+    12:     <%= f.label :name %><br>
+    13:     <%= f.text_field :name %><br>
+    14:     <%= f.hidden :seller_id => 2 %>
+    15:     <%= f.label :description %><br>
+    16:     <%= f.text_field :description %><br>
+    17:     <%= f.label :asking_price %><br>
+  
+app/views/items/new.erb:14
+app/views/items/new.erb:11
+Started GET "/items/new" for ::1 at 2020-11-06 14:06:59 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered items/new.erb within layouts/application (Duration: 12.6ms | Allocations: 3512)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 4769)
+
+
+  
+ActionView::Template::Error (undefined method `{:seller_id=>2}' for #<Item:0x00007fe499ef20d8>
+Did you mean?  seller_id=):
+    11: <%= form_for @item do |f| %>
+    12:     <%= f.label :name %><br>
+    13:     <%= f.text_field :name %><br>
+    14:     <%= f.hidden_field :seller_id => 2 %>
+    15:     <%= f.label :description %><br>
+    16:     <%= f.text_field :description %><br>
+    17:     <%= f.label :asking_price %><br>
+  
+app/views/items/new.erb:14
+app/views/items/new.erb:11
+Started GET "/items/new" for ::1 at 2020-11-06 14:07:36 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered items/new.erb within layouts/application (Duration: 2.2ms | Allocations: 1417)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 6451)
+
+
+Started GET "/items/new" for ::1 at 2020-11-06 14:07:53 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered items/new.erb within layouts/application (Duration: 1.8ms | Allocations: 1413)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 6437)
+
+
+Started POST "/items" for ::1 at 2020-11-06 14:08:13 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"zst3T9NYIGk2AN8WIdPsG+MZmHI5tavNA7wJkpNMsN109Im3Wl/lpNKSDK8tkPyQ3SswmuN03c2Y8qZi1DuKmw==", "item"=>{"name"=>"Jake Duck", "seller_id"=>"2", "description"=>"Jake's Duck", "asking_price"=>"10000", "end_date"=>"2020-11-30"}, "commit"=>"Add Item"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:16:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:16:in `create'
+  [1m[36mItem Create (3.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "seller_id", "asking_price", "end_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jake Duck"], ["description", "Jake's Duck"], ["seller_id", 2], ["asking_price", 10000.0], ["end_date", "2020-11-30"], ["created_at", "2020-11-06 19:08:13.251445"], ["updated_at", "2020-11-06 19:08:13.251445"]]
+  ↳ app/controllers/items_controller.rb:16:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:16:in `create'
+Redirected to http://localhost:3000/items/60
+Completed 302 Found in 32ms (ActiveRecord: 5.1ms | Allocations: 13849)
+
+
+Started GET "/items/60" for ::1 at 2020-11-06 14:08:13 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:7:in `show'
+  Rendering items/show.erb within layouts/application
+  Rendered items/show.erb within layouts/application (Duration: 0.2ms | Allocations: 72)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 4929)
+
+
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."name" = ? LIMIT ?[0m  [["name", "Jake Duck"], ["LIMIT", 1]]
+Started GET "/items/new" for ::1 at 2020-11-06 14:15:01 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered items/new.erb within layouts/application (Duration: 0.9ms | Allocations: 1020)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2274)
+
+
+  
+ActionView::Template::Error (':item_form' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <h1>Add Item</h1>
+    2: 
+    3: <%= render partial: :item_form%>
+  
+app/views/items/new.erb:3
+Started GET "/items/new" for ::1 at 2020-11-06 14:15:17 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered items/new.erb within layouts/application (Duration: 2.4ms | Allocations: 1639)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2893)
+
+
+  
+ActionView::Template::Error (Missing partial items/_item form, application/_item form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/jakeshort/Desktop/Flatiron/duckat/app/views"
+  * "/Users/jakeshort/.rvm/gems/ruby-2.6.1/gems/actiontext-6.0.3.4/app/views"
+  * "/Users/jakeshort/.rvm/gems/ruby-2.6.1/gems/actionmailbox-6.0.3.4/app/views"
+):
+    1: <h1>Add Item</h1>
+    2: 
+    3: <%= render partial: "item form" %>
+  
+app/views/items/new.erb:3
+Started GET "/items/new" for ::1 at 2020-11-06 14:15:36 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered items/new.erb within layouts/application (Duration: 1.5ms | Allocations: 1017)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2271)
+
+
+  
+ActionView::Template::Error (':item_form' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <h1>Add Item</h1>
+    2: 
+    3: <%= render partial: :item_form %>
+  
+app/views/items/new.erb:3
+Started GET "/items/new" for ::1 at 2020-11-06 14:15:43 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered items/new.erb within layouts/application (Duration: 0.6ms | Allocations: 1019)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2273)
+
+
+  
+ActionView::Template::Error (':item_form_path' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <h1>Add Item</h1>
+    2: 
+    3: <%= render partial: :item_form_path %>
+  
+app/views/items/new.erb:3
+Started GET "/items/new" for ::1 at 2020-11-06 14:16:23 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered items/new.erb within layouts/application (Duration: 1.6ms | Allocations: 1637)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2891)
+
+
+  
+ActionView::Template::Error (Missing partial items/_item form, application/_item form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/jakeshort/Desktop/Flatiron/duckat/app/views"
+  * "/Users/jakeshort/.rvm/gems/ruby-2.6.1/gems/actiontext-6.0.3.4/app/views"
+  * "/Users/jakeshort/.rvm/gems/ruby-2.6.1/gems/actionmailbox-6.0.3.4/app/views"
+):
+    1: <h1>Add Item</h1>
+    2: 
+    3: <%= render partial: "item form" %>
+  
+app/views/items/new.erb:3
+Started GET "/items/new" for ::1 at 2020-11-06 14:16:48 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered items/_item_form.erb (Duration: 2.4ms | Allocations: 1409)
+  Rendered items/new.erb within layouts/application (Duration: 3.1ms | Allocations: 1700)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 6731)
+
+
+Started GET "/items/new" for ::1 at 2020-11-06 14:19:41 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered items/_item_form.erb (Duration: 2.3ms | Allocations: 1407)
+  Rendered items/new.erb within layouts/application (Duration: 3.0ms | Allocations: 1698)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 6736)
+
+
+Started GET "/items" for ::1 at 2020-11-06 14:19:42 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:4
+  Rendered items/index.erb within layouts/application (Duration: 6.7ms | Allocations: 3125)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.7ms | Allocations: 7299)
+
+
+Started GET "/items/1" for ::1 at 2020-11-06 14:20:22 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:7:in `show'
+  Rendering items/show.erb within layouts/application
+  Rendered items/show.erb within layouts/application (Duration: 0.3ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 4808)
+
+
+Started GET "/items/1" for ::1 at 2020-11-06 14:21:33 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:7:in `show'
+  Rendering items/show.erb within layouts/application
+  Rendered items/show.erb within layouts/application (Duration: 0.4ms | Allocations: 157)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.2ms | Allocations: 5722)
+
+
+Started GET "/items/1" for ::1 at 2020-11-06 14:23:07 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:7:in `show'
+  Rendering items/show.erb within layouts/application
+  Rendered items/show.erb within layouts/application (Duration: 0.4ms | Allocations: 163)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.1ms | Allocations: 5722)
+
+
+Started GET "/items" for ::1 at 2020-11-06 14:23:33 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:4
+  Rendered items/index.erb within layouts/application (Duration: 4.2ms | Allocations: 3096)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.3ms | Allocations: 7273)
+
+
+Started GET "/items/2" for ::1 at 2020-11-06 14:23:35 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:7:in `show'
+  Rendering items/show.erb within layouts/application
+  Rendered items/show.erb within layouts/application (Duration: 0.2ms | Allocations: 25)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.2ms | Allocations: 4603)
+
+
