@@ -685,3 +685,70 @@ Migrating to CreateBids (20201106165446)
   [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mBid Load (0.2ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."item_id" = ? LIMIT ?[0m  [["item_id", 1], ["LIMIT", 11]]
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "bids" ON "users"."id" = "bids"."user_id" WHERE "bids"."item_id" = ? LIMIT ?[0m  [["item_id", 1], ["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-11-06 12:50:09 -0500
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/jakeshort/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/jakeshort/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.3ms | Allocations: 481)
+Completed 200 OK in 28ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 2849)
+
+
+Started GET "/items" for ::1 at 2020-11-06 12:50:20 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  Rendered items/index.erb within layouts/application (Duration: 0.6ms | Allocations: 192)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/jakeshort/Desktop/Flatiron/duckat/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.2
+Time: 1808ms
+Built at: 11/06/2020 12:50:24 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 500 Internal Server Error in 4422ms (ActiveRecord: 0.0ms | Allocations: 172450)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `login_form_path' for #<#<Class:0x00007ff188c53448>:0x00007ff188c517d8>):
+    11: 
+    12:   <body>
+    13:     <header>
+    14:       <%= link_to "Login", login_form_path %> | 
+    15:       <%= link_to "Items", items_path %> | 
+    16:       <%= link_to "New Item", new_item_path %>
+    17:     </header>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/items" for ::1 at 2020-11-06 12:50:48 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  Rendered items/index.erb within layouts/application (Duration: 0.2ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 5106)
+
+
+Started GET "/" for ::1 at 2020-11-06 12:50:54 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/jakeshort/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/jakeshort/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.8ms | Allocations: 192)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 973)
+
+
+Started GET "/items" for ::1 at 2020-11-06 12:51:01 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  Rendered items/index.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 4042)
+
+
