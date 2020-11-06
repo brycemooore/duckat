@@ -9,7 +9,7 @@
 <%= form_for @item do |f| %>
     <%= f.label :name %><br>
     <%= f.text_field :name %><br>
-    <%= f.hidden_field :seller_id, value: 2 %>
+    <%= f.hidden_field :seller_id, value: current_user.id %>
     <%= f.label :description %><br>
     <%= f.text_field :description %><br>
     <%= f.label :asking_price %><br>

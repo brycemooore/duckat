@@ -1,0 +1,4 @@
+<h1>Hey there <%= @user.username %></h1>
+<h3>Your account balance is: <%= @user.balance %></h3>
+<h3><%= link_to "Edit yourself", edit_user_path(@user.id) %></h3>
+<h3><%= link_to "End it all please", user_path(@user.id), method: 'delete'%></h3>

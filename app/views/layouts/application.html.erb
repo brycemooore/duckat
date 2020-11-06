@@ -10,11 +10,7 @@
   </head>
 
   <body>
-    <header>
-      <%# <%= link_to "Login", login_form_path %> |  %>
-      <%= link_to "Items", items_path %> | 
-      <%= link_to "New Item", new_item_path %>
-    </header>
+    <%= render partial: 'shared/nav' %>
     <%= yield %>
   </body>
 </html>
