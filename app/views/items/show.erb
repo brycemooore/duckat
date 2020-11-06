@@ -8,6 +8,7 @@
     <% if @item.seller_id == current_user.id  %>
         <%= button_tag "MY ITEM"%>
     <% else %>
+        <%= render partial: 'shared/errors', locals: {object: @bid} %>
         <%= form_for @bid, method: :post do |f| %>
             <%= f.label :bid_amount,"Place Bid:" %>
             <%= f.number_field :bid_amount %>
@@ -17,12 +18,8 @@
         <% end %>
     <% end %>
 </h3>
-<h2><%= @item.name %></h2>
-<h2><%= @item.description %></h2>
-<h2><%= @item.display_asking_price %></h2>
-<h2><%= @item.end_date %></h2>
 
-<%= if @item.tags.any? %>
+<% if @item.tags.any? %>
     <h2>Tags</h2>
     <% @item.tags.each do |tag| %>
         <%= tag.name %>

@@ -6,7 +6,6 @@ class ItemsController < ApplicationController
     def show
         @item = Item.find(params[:id])
         @bid = Bid.new
-        if 
     end
 
     def new
