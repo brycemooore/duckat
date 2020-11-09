@@ -10,7 +10,7 @@ class Item < ApplicationRecord
     validates :name, :asking_price, :end_date,  presence: true
     validates :image, presence: false
     validate :valid_asking_price
-    validate :valid_date
+    # validate :valid_date
 
     before_save :default_desc
 

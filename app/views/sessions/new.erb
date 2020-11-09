@@ -1,5 +1,9 @@
 <h1>Login</h1>
 
+<% if params["failed_to_find_user"] %>
+    <h4 class="alert alert-danger">Password incorrect.</h4>
+<% end %>
+
 <%=form_tag login_path do %>
     <%= label_tag :username %>
     <%= text_field_tag :username %>

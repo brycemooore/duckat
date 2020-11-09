@@ -3,14 +3,14 @@ class SessionsController < ApplicationController
     end
 
     def create
-        if params[:username].present?
-            @user = User.find_by(username: params[:username])
-            return head(:forbidden) unless @user.authenticate(params[:password])
+        @user = User.find_by(username: params[:username])
+        if @user == nil
+            redirect_to new_user_path(failed_to_find_user: true)
+        elsif @user.authenticate(params[:password])
             session[:user_id] = @user.id
-            session[:username] = params[:username]
             redirect_to home_path
         else 
-            redirect_to login_form_path
+            redirect_to login_form_path(failed_to_find_user: true)
         end 
     end 
 

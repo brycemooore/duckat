@@ -1,5 +1,9 @@
 <h1>New User</h1>
 
+<% if params["failed_to_find_user"] %>
+    <h4 class="alert alert-danger">User not found. Please create a username and password to login.</h4>
+<% end %>
+
 <%= render partial: 'shared/errors', locals: {object: @user} %>
 
 <%= render partial: 'form' %>

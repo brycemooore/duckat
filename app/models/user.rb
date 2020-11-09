@@ -10,9 +10,9 @@ class User < ApplicationRecord
 
     has_secure_password
 
-    def add_item(name, desc, price, date)
+    def add_item(name, desc, price, date, image)
         Item.create(seller_id: self.id, name: name, description: desc, asking_price: price, 
-        end_date: date)
+        end_date: date, image: image)
     end 
 
     def make_bid(item, amount)
