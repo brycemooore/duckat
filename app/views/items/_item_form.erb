@@ -5,6 +5,8 @@
     <%= f.hidden_field :seller_id, value: current_user.id %>
     <%= f.label :description %><br>
     <%= f.text_field :description %><br>
+    <%= f.label :image, "Image URL" %><br>
+    <%= f.text_field :image %><br>
     <%= f.label :asking_price %><br>
     <%= f.number_field :asking_price %><br>
     <%= f.label "Deadline for item's sale"%><br>

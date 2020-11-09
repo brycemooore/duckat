@@ -8,6 +8,7 @@ class Item < ApplicationRecord
     has_many :tags, through: :item_tags
     
     validates :name, :asking_price, :end_date,  presence: true
+    validates :image, presence: false
     validate :valid_asking_price
     validate :valid_date
 
