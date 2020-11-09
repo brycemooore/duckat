@@ -8,6 +8,8 @@ class User < ApplicationRecord
 
     validates :username, uniqueness: true, presence: true
 
+    has_secure_password
+
     def add_item(name, desc, price, date)
         Item.create(seller_id: self.id, name: name, description: desc, asking_price: price, 
         end_date: date)

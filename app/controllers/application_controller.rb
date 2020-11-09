@@ -6,8 +6,8 @@ class ApplicationController < ActionController::Base
     end 
 
     def current_user
-        if session[:username].present?
-            return User.find_by(username: session[:username])
+        if session[:user_id].present?
+            return User.find(session[:user_id])
         end
     end 
 

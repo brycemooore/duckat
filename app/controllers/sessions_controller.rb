@@ -4,6 +4,9 @@ class SessionsController < ApplicationController
 
     def create
         if params[:username].present?
+            @user = User.find_by(username: params[:username])
+            return head(:forbidden) unless @user.authenticate(params[:password])
+            session[:user_id] = @user.id
             session[:username] = params[:username]
             redirect_to home_path
         else 
@@ -12,8 +15,8 @@ class SessionsController < ApplicationController
     end 
 
     def destroy
-        if session[:username].present?
-            session.delete :username
+        if logged_in?
+            session.delete :user_id
         end
         redirect_to home_path
     end 
