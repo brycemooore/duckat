@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   
 
   get '/', to: 'application#home', as: 'home'
-  get '/login', to: 'login#login_form', as: 'login_form'
-  post '/login', to: 'login#login', as: 'login'
-  get '/logout', to: 'login#destroy', as: 'logout'
+  get '/login', to: 'sessions#new', as: 'login_form'
+  post '/login', to: 'sessions#create', as: 'login'
+  post '/logout', to: 'sessions#destroy', as: 'logout'
 
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
