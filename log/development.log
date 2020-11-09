@@ -79269,3 +79269,2294 @@ Started GET "/auth/google_oauth2" for ::1 at 2020-11-09 10:53:53 -0500
 Started GET "/auth/google_oauth2" for ::1 at 2020-11-09 10:55:51 -0500
 Started GET "/auth/google_oauth2" for ::1 at 2020-11-09 11:00:10 -0500
 >>>>>>> 83cd899e7e415b157dcf1df84bf0dbdef02caeb7
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddImageToItems (20201109170132)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "items" ADD "image" varchar[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201109170132"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT "items".* FROM "items" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/" for ::1 at 2020-11-09 12:10:11 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#home as HTML
+  Rendering application/home.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered application/home.erb within layouts/application (Duration: 27.1ms | Allocations: 8549)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 5.0ms | Allocations: 1522)
+Completed 200 OK in 79ms (Views: 71.5ms | ActiveRecord: 1.6ms | Allocations: 20256)
+
+
+Started GET "/items/new" for ::1 at 2020-11-09 12:10:14 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.6ms | Allocations: 188)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 181.1ms | Allocations: 200336)
+  Rendered items/new.erb within layouts/application (Duration: 183.2ms | Allocations: 201044)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.6ms | Allocations: 1241)
+Completed 200 OK in 221ms (Views: 191.2ms | ActiveRecord: 0.7ms | Allocations: 216141)
+
+
+Started GET "/items/new" for ::1 at 2020-11-09 12:10:27 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.8ms | Allocations: 180)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 4.2ms | Allocations: 2153)
+  Rendered items/new.erb within layouts/application (Duration: 7.0ms | Allocations: 2847)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.5ms | Allocations: 1476)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.2ms | Allocations: 9605)
+
+
+Started GET "/items/new" for ::1 at 2020-11-09 12:11:03 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.6ms | Allocations: 180)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 16.2ms | Allocations: 2192)
+  Rendered items/new.erb within layouts/application (Duration: 18.6ms | Allocations: 2882)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.1ms | Allocations: 1478)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.2ms | Allocations: 9625)
+
+
+Started GET "/items/new" for ::1 at 2020-11-09 12:11:16 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.0ms | Allocations: 15)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 3.2ms | Allocations: 1867)
+  Rendered items/new.erb within layouts/application (Duration: 3.6ms | Allocations: 2014)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.0ms | Allocations: 1235)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.2ms | Allocations: 7445)
+
+
+Started GET "/items/new" for ::1 at 2020-11-09 12:11:56 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.3ms | Allocations: 180)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 4.2ms | Allocations: 2043)
+  Rendered items/new.erb within layouts/application (Duration: 5.7ms | Allocations: 2736)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.0ms | Allocations: 1476)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.2ms | Allocations: 9488)
+
+
+Started POST "/items" for ::1 at 2020-11-09 12:12:25 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"S3194LQPeADnbQAsNZ2rzMOWDl2jXkxyXtLCBqfNSyO8YnmJy9rHa76i6gIR5e3W5Ym9ym/qnoka+wY3VXEdiw==", "item"=>{"name"=>"image duck", "seller_id"=>"2", "description"=>"image", "image"=>"https://media.istockphoto.com/photos/rubber-duck-picture-id476147637?k=6&m=476147637&s=612x612&w=0&h=AkhVVp-iQHgQmC9ullv78kYYRDHvPi6QOv8jZFwCRKo=", "asking_price"=>"5", "end_date"=>"2020-11-18"}, "commit"=>"Add Item"}
+[31mUnpermitted parameter: :image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "seller_id", "asking_price", "end_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "image duck"], ["description", "image"], ["seller_id", 2], ["asking_price", 5.0], ["end_date", "2020-11-18"], ["created_at", "2020-11-09 17:12:25.661846"], ["updated_at", "2020-11-09 17:12:25.661846"]]
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:24:in `create'
+Redirected to http://localhost:3000/items/64
+Completed 302 Found in 15ms (ActiveRecord: 1.9ms | Allocations: 6307)
+
+
+Started GET "/items/64" for ::1 at 2020-11-09 12:12:25 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"64"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 64], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 64], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:15
+  Rendered items/show.erb within layouts/application (Duration: 17.6ms | Allocations: 8126)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.0ms | Allocations: 1256)
+Completed 200 OK in 39ms (Views: 24.8ms | ActiveRecord: 2.4ms | Allocations: 19124)
+
+
+Started GET "/items" for ::1 at 2020-11-09 12:12:36 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 7.5ms | Allocations: 3699)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.0ms | Allocations: 1300)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.6ms | Allocations: 9333)
+
+
+Started GET "/" for ::1 at 2020-11-09 12:12:41 -0500
+Processing by ApplicationController#home as HTML
+  Rendering application/home.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered application/home.erb within layouts/application (Duration: 2.8ms | Allocations: 1240)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.6ms | Allocations: 1256)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.2ms | Allocations: 6933)
+
+
+Started GET "/items" for ::1 at 2020-11-09 12:15:19 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 8.9ms | Allocations: 3660)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 4.2ms | Allocations: 1534)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.9ms | Allocations: 10463)
+
+
+Started GET "/items/64" for ::1 at 2020-11-09 12:15:21 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"64"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 64], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 64], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:18
+  Rendered items/show.erb within layouts/application (Duration: 4.6ms | Allocations: 1914)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 3.4ms | Allocations: 1256)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.6ms | Allocations: 8038)
+
+
+Started GET "/items/64" for ::1 at 2020-11-09 12:16:59 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"64"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 64], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  Rendered items/show.erb within layouts/application (Duration: 10.2ms | Allocations: 3537)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.1ms | Allocations: 5240)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    3: <h2>Name: <%= @item.name %></h2>
+    4: <h2>Description: <%= @item.description %></h2>
+    5: <h2>
+    6:     <% image_tag @item.image %>
+    7: </h2>
+    8: <h2>Price: $<%= @item.asking_price %>0</h2>
+    9: <h2>Auction Closes: <%= @item.end_date %></h2>
+  
+app/views/items/show.erb:6
+Started GET "/items/64" for ::1 at 2020-11-09 12:17:05 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"64"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 64], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  Rendered items/show.erb within layouts/application (Duration: 1.4ms | Allocations: 1229)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms | Allocations: 2976)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    3: <h2>Name: <%= @item.name %></h2>
+    4: <h2>Description: <%= @item.description %></h2>
+    5: <h2>
+    6:     <%= image_tag @item.image %>
+    7: </h2>
+    8: <h2>Price: $<%= @item.asking_price %>0</h2>
+    9: <h2>Auction Closes: <%= @item.end_date %></h2>
+  
+app/views/items/show.erb:6
+Started GET "/items" for ::1 at 2020-11-09 12:17:21 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 7.3ms | Allocations: 3660)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 3.3ms | Allocations: 1536)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.5ms | Allocations: 9896)
+
+
+Started GET "/items/64" for ::1 at 2020-11-09 12:17:23 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"64"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 64], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  Rendered items/show.erb within layouts/application (Duration: 0.4ms | Allocations: 901)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 1863)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    3: <h2>Name: <%= @item.name %></h2>
+    4: <h2>Description: <%= @item.description %></h2>
+    5: <h2>
+    6:     <%= image_tag @item.image %>
+    7: </h2>
+    8: <h2>Price: $<%= @item.asking_price %>0</h2>
+    9: <h2>Auction Closes: <%= @item.end_date %></h2>
+  
+app/views/items/show.erb:6
+Started GET "/items/64" for ::1 at 2020-11-09 12:19:57 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"64"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 64], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  Rendered items/show.erb within layouts/application (Duration: 0.4ms | Allocations: 899)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 1859)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    3: <h2>Name: <%= @item.name %></h2>
+    4: <h2>Description: <%= @item.description %></h2>
+    5: <h2>
+    6:     <%= image_tag @item.image %>
+    7: </h2>
+    8: <h2>Price: $<%= @item.asking_price %>0</h2>
+    9: <h2>Auction Closes: <%= @item.end_date %></h2>
+  
+app/views/items/show.erb:6
+Started GET "/items/64" for ::1 at 2020-11-09 12:21:04 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"64"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 64], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 64], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:18
+  Rendered items/show.erb within layouts/application (Duration: 3.2ms | Allocations: 1945)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.0ms | Allocations: 1486)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.5ms | Allocations: 9233)
+
+
+Started GET "/items" for ::1 at 2020-11-09 12:21:13 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 6.5ms | Allocations: 3660)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.5ms | Allocations: 1300)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.7ms | Allocations: 9286)
+
+
+Started GET "/items/64" for ::1 at 2020-11-09 12:21:15 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"64"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 64], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 64], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:18
+  Rendered items/show.erb within layouts/application (Duration: 3.8ms | Allocations: 1601)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.3ms | Allocations: 1245)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.6ms | Allocations: 7573)
+
+
+Started GET "/items" for ::1 at 2020-11-09 12:21:34 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 5.8ms | Allocations: 3346)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.6ms | Allocations: 1293)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.6ms | Allocations: 8829)
+
+
+Started GET "/items/1" for ::1 at 2020-11-09 12:21:36 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:18
+  Rendered items/show.erb within layouts/application (Duration: 3.2ms | Allocations: 1602)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.6ms | Allocations: 1245)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.6ms | Allocations: 7571)
+
+
+Started GET "/items/new" for ::1 at 2020-11-09 12:22:11 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 1.1ms | Allocations: 181)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 6.4ms | Allocations: 2053)
+  Rendered items/new.erb within layouts/application (Duration: 10.6ms | Allocations: 2746)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.9ms | Allocations: 1243)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.2ms | Allocations: 8308)
+
+
+Started POST "/items" for ::1 at 2020-11-09 12:22:23 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"bTq16tzQDNMhG/Bhgp+kcfogm71sIqgwTPmhII6Cw8kE1E7Na6dHZFNg2yOM92I6OgLSdkN+6rahS/y11/4yLQ==", "item"=>{"name"=>"another test", "seller_id"=>"2", "description"=>"test", "image"=>"https://cdn11.bigcommerce.com/s-jnapaiw/images/stencil/1280x1280/products/2945/4049/Sunny_duck__52036.1400093435.jpg?c=2", "asking_price"=>"4", "end_date"=>"2020-12-01"}, "commit"=>"Add Item"}
+[31mUnpermitted parameter: :image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[36mItem Create (0.7ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "seller_id", "asking_price", "end_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "another test"], ["description", "test"], ["seller_id", 2], ["asking_price", 4.0], ["end_date", "2020-12-01"], ["created_at", "2020-11-09 17:22:23.130359"], ["updated_at", "2020-11-09 17:22:23.130359"]]
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:24:in `create'
+Redirected to http://localhost:3000/items/65
+Completed 302 Found in 11ms (ActiveRecord: 2.1ms | Allocations: 4086)
+
+
+Started GET "/items/65" for ::1 at 2020-11-09 12:22:23 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"65"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 65], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:18
+  Rendered items/show.erb within layouts/application (Duration: 2.5ms | Allocations: 1601)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.6ms | Allocations: 1245)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.5ms | Allocations: 7572)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/items" for ::1 at 2020-11-09 12:25:17 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 15.7ms | Allocations: 9570)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 14.2ms | Allocations: 6935)
+Completed 200 OK in 48ms (Views: 37.6ms | ActiveRecord: 2.3ms | Allocations: 23955)
+
+
+Started GET "/items/new" for ::1 at 2020-11-09 12:25:19 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.0ms | Allocations: 15)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 3.2ms | Allocations: 1791)
+  Rendered items/new.erb within layouts/application (Duration: 3.6ms | Allocations: 1937)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.9ms | Allocations: 1235)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.1ms | Allocations: 7359)
+
+
+Started POST "/items" for ::1 at 2020-11-09 12:25:30 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"M8ebFtECYDhA+phogKV1PrcnCM66oyrTjCQFMuvpVY5aKWAxZnUrjzKBsyqOzbN1dwVBBZX/aFVhllinspWkag==", "item"=>{"name"=>"validates test", "seller_id"=>"2", "description"=>"test", "image"=>"https://cdn11.bigcommerce.com/s-jnapaiw/images/stencil/1280x1280/products/2945/4049/Sunny_duck__52036.1400093435.jpg?c=2", "asking_price"=>"5", "end_date"=>"2020-12-08"}, "commit"=>"Add Item"}
+[31mUnpermitted parameter: :image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "seller_id", "asking_price", "end_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "validates test"], ["description", "test"], ["seller_id", 2], ["asking_price", 5.0], ["end_date", "2020-12-08"], ["created_at", "2020-11-09 17:25:30.976295"], ["updated_at", "2020-11-09 17:25:30.976295"]]
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:24:in `create'
+Redirected to http://localhost:3000/items/66
+Completed 302 Found in 9ms (ActiveRecord: 1.7ms | Allocations: 5030)
+
+
+Started GET "/items/66" for ::1 at 2020-11-09 12:25:30 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"66"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 66], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 66], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:18
+  Rendered items/show.erb within layouts/application (Duration: 9.7ms | Allocations: 6053)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.5ms | Allocations: 1245)
+Completed 200 OK in 28ms (Views: 15.6ms | ActiveRecord: 2.1ms | Allocations: 16627)
+
+
+Started GET "/items" for ::1 at 2020-11-09 12:25:35 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 6.0ms | Allocations: 3424)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.9ms | Allocations: 1293)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.6ms | Allocations: 8902)
+
+
+Started GET "/items/66" for ::1 at 2020-11-09 12:25:38 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"66"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 66], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 66], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:18
+  Rendered items/show.erb within layouts/application (Duration: 4.2ms | Allocations: 1602)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.4ms | Allocations: 1245)
+Completed 200 OK in 16ms (Views: 13.4ms | ActiveRecord: 0.8ms | Allocations: 7571)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mItem Update (0.7ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = ?, "image" = ? WHERE "items"."id" = ?[0m  [["updated_at", "2020-11-09 17:26:28.303683"], ["image", "https://cdn11.bigcommerce.com/s-jnapaiw/images/stencil/1280x1280/products/2945/4049/Sunny_duck__52036.1400093435.jpg?c=2"], ["id", 65]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/items" for ::1 at 2020-11-09 12:26:44 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 6.7ms | Allocations: 3425)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.7ms | Allocations: 1293)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.6ms | Allocations: 8912)
+
+
+Started GET "/items/65" for ::1 at 2020-11-09 12:26:47 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"65"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 65], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:18
+  Rendered items/show.erb within layouts/application (Duration: 3.3ms | Allocations: 1601)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.8ms | Allocations: 1245)
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 0.7ms | Allocations: 7580)
+
+
+Started GET "/items/65" for ::1 at 2020-11-09 12:28:21 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"65"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 65], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 2.9ms | Allocations: 1940)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 3.0ms | Allocations: 1486)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.4ms | Allocations: 9240)
+
+
+Started GET "/items" for ::1 at 2020-11-09 12:28:29 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 5.0ms | Allocations: 3738)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.7ms | Allocations: 1300)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.5ms | Allocations: 9363)
+
+
+Started GET "/items/15" for ::1 at 2020-11-09 12:28:30 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 15], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 4.9ms | Allocations: 1653)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.9ms | Allocations: 1236)
+Completed 200 OK in 17ms (Views: 14.1ms | ActiveRecord: 0.6ms | Allocations: 7621)
+
+
+Started GET "/items/new" for ::1 at 2020-11-09 12:28:35 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.4ms | Allocations: 180)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 28.0ms | Allocations: 2034)
+  Rendered items/new.erb within layouts/application (Duration: 30.0ms | Allocations: 2726)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.3ms | Allocations: 1243)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.2ms | Allocations: 8289)
+
+
+Started POST "/items" for ::1 at 2020-11-09 12:29:01 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"zddnxPVrVrMXQULUDjmrUxdrGNPEPcwwZA0n25dY+GekOZzjQhwdBGU6aZYAUW0Y10lRGOthjraJv3pOziQJgw==", "item"=>{"name"=>"final image", "seller_id"=>"2", "description"=>"d", "image"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTP1qntfaExPwkHq2fxluJJYZqgcgYjc_Z21w&usqp=CAU", "asking_price"=>"4", "end_date"=>"2020-11-18"}, "commit"=>"Add Item"}
+[31mUnpermitted parameter: :image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "seller_id", "asking_price", "end_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "final image"], ["description", "d"], ["seller_id", 2], ["asking_price", 4.0], ["end_date", "2020-11-18"], ["created_at", "2020-11-09 17:29:01.563300"], ["updated_at", "2020-11-09 17:29:01.563300"]]
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:24:in `create'
+Redirected to http://localhost:3000/items/67
+Completed 302 Found in 7ms (ActiveRecord: 1.3ms | Allocations: 4082)
+
+
+Started GET "/items/67" for ::1 at 2020-11-09 12:29:01 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 67], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 2.8ms | Allocations: 1608)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.4ms | Allocations: 1245)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.5ms | Allocations: 7586)
+
+
+Started GET "/items" for ::1 at 2020-11-09 12:29:31 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 4.2ms | Allocations: 3465)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.3ms | Allocations: 1293)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.5ms | Allocations: 8948)
+
+
+Started GET "/items/67" for ::1 at 2020-11-09 12:29:35 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 67], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 2.9ms | Allocations: 1608)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 3.2ms | Allocations: 1245)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.5ms | Allocations: 7576)
+
+
+Started GET "/items/66" for ::1 at 2020-11-09 12:29:39 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"66"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 66], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 66], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 2.6ms | Allocations: 1608)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.1ms | Allocations: 1245)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.4ms | Allocations: 7579)
+
+
+Started GET "/items/65" for ::1 at 2020-11-09 12:29:41 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"65"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 65], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 4.4ms | Allocations: 1608)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 3.1ms | Allocations: 1245)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.5ms | Allocations: 7579)
+
+
+Started GET "/items/62" for ::1 at 2020-11-09 12:29:44 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"62"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 62], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 3.3ms | Allocations: 1608)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.4ms | Allocations: 1245)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.6ms | Allocations: 7578)
+
+
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = ?, "image" = ? WHERE "items"."id" = ?[0m  [["updated_at", "2020-11-09 17:30:55.057936"], ["image", "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTP1qntfaExPwkHq2fxluJJYZqgcgYjc_Z21w&usqp=CAU"], ["id", 67]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/items/67" for ::1 at 2020-11-09 12:31:04 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 67], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 2.7ms | Allocations: 1609)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.5ms | Allocations: 1245)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.5ms | Allocations: 7582)
+
+
+Started GET "/items/new" for ::1 at 2020-11-09 12:33:46 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.0ms | Allocations: 15)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 3.2ms | Allocations: 1731)
+  Rendered items/new.erb within layouts/application (Duration: 3.6ms | Allocations: 1877)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 3.0ms | Allocations: 1235)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.2ms | Allocations: 7303)
+
+
+Started GET "/items" for ::1 at 2020-11-09 12:34:00 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 5.1ms | Allocations: 3465)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.9ms | Allocations: 1293)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.5ms | Allocations: 8944)
+
+
+Started GET "/items/12" for ::1 at 2020-11-09 12:34:01 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 12], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 3.5ms | Allocations: 1649)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.1ms | Allocations: 1236)
+Completed 200 OK in 16ms (Views: 12.3ms | ActiveRecord: 0.7ms | Allocations: 7607)
+
+
+Started GET "/items/12" for ::1 at 2020-11-09 12:34:36 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 12], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 34.1ms | Allocations: 14700)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.7ms | Allocations: 1497)
+Completed 200 OK in 121ms (Views: 62.1ms | ActiveRecord: 5.2ms | Allocations: 42923)
+
+
+Started GET "/items/new" for ::1 at 2020-11-09 12:34:38 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.9ms | Allocations: 188)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 139.6ms | Allocations: 200188)
+  Rendered items/new.erb within layouts/application (Duration: 143.2ms | Allocations: 200897)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.5ms | Allocations: 1241)
+Completed 200 OK in 152ms (Views: 150.8ms | ActiveRecord: 0.1ms | Allocations: 206468)
+
+
+Started POST "/items" for ::1 at 2020-11-09 12:35:05 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"NKsDtfgfUfGfh+9VJgw0IxwtKKsgX8HvlCPrxGewyQ9dRfiST2gaRu38xBcoZPJo3A9hYA8Dg2l5kbZRPsw46w==", "item"=>{"name"=>"image testing", "seller_id"=>"2", "description"=>"t", "image"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS4X4O8Hhl1hCDJWioT8T-LpsEMzdxZm_eNiA&usqp=CAU", "asking_price"=>"4", "end_date"=>"2020-12-01"}, "commit"=>"Add Item"}
+[31mUnpermitted parameter: :image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "seller_id", "asking_price", "end_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "image testing"], ["description", "t"], ["seller_id", 2], ["asking_price", 4.0], ["end_date", "2020-12-01"], ["created_at", "2020-11-09 17:35:05.759299"], ["updated_at", "2020-11-09 17:35:05.759299"]]
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:24:in `create'
+Redirected to http://localhost:3000/items/68
+Completed 302 Found in 10ms (ActiveRecord: 1.4ms | Allocations: 5504)
+
+
+Started GET "/items/68" for ::1 at 2020-11-09 12:35:05 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 68], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 4.1ms | Allocations: 1611)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.7ms | Allocations: 1245)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.7ms | Allocations: 7581)
+
+
+Started GET "/items/68" for ::1 at 2020-11-09 12:36:14 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  Rendered items/show.erb within layouts/application (Duration: 9.7ms | Allocations: 3564)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.1ms | Allocations: 5269)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Item Details</h1>
+
+<h2>Name: <%= @item.name %></h2>
+<h2>Description: <%= @item.description %></h2>
+<h2>
+    <%= image_tag @item.image || "https://media.istockphoto.com/photos/rubber-duck-picture-id476147637?k=6&m=476147637&s=612x612&w=0&h=AkhVVp-iQHgQmC9ullv78kYYRDHvPi6QOv8jZFwCRKo=",
+    style: 'height: 50px;width: 50px;' %>
+</h2>
+<h2>Price: $<%= @item.asking_price %>0</h2>
+<h2>Auction Closes: <%= @item.end_date %></h2>
+<h3>
+    <% if @item.seller_id == current_user.id  %>
+        <%= link_to "This is your item for sale.", item_path @item %>
+    <% else %>
+        <%= link_to "Place Bid", new_bid_path(item_id: @item.id) %>
+    <% end %> 
+</h3>
+
+<% if @item.tags.any? %>
+    <h2>Tags</h2>
+    <% @item.tags.each do |tag| %>
+        <%= tag.name %>
+    <% end %>
+<% end %>
+
+):
+1:    <h1>Item Details</h1>
+2:    
+3:    <h2>Name: <%= @item.name %></h2>
+4:    <h2>Description: <%= @item.description %></h2>
+5:    <h2>
+6:        <%= image_tag @item.image || "https://media.istockphoto.com/photos/rubber-duck-picture-id476147637?k=6&m=476147637&s=612x612&w=0&h=AkhVVp-iQHgQmC9ullv78kYYRDHvPi6QOv8jZFwCRKo=",
+7:        style: 'height: 50px;width: 50px;' %>
+8:    </h2>
+9:    <h2>Price: $<%= @item.asking_price %>0</h2>
+10:    <h2>Auction Closes: <%= @item.end_date %></h2>
+11:    <h3>
+12:        <% if @item.seller_id == current_user.id  %>
+13:            <%= link_to "This is your item for sale.", item_path @item %>
+14:        <% else %>
+15:            <%= link_to "Place Bid", new_bid_path(item_id: @item.id) %>
+16:        <% end %> 
+17:    </h3>
+18:    
+19:    <% if @item.tags.any? %>
+20:        <h2>Tags</h2>
+21:        <% @item.tags.each do |tag| %>
+22:            <%= tag.name %>
+23:        <% end %>
+24:    <% end %>
+  
+app/views/items/show.erb:13: syntax error, unexpected tIVAR, expecting do or '{' or '('
+app/views/items/show.erb:13: syntax error, unexpected tIVAR, expecting do or '{' or '('
+app/views/items/show.erb:13: syntax error, unexpected tIVAR, expecting do or '{' or '('
+app/views/items/show.erb:13: syntax error, unexpected tIVAR, expecting do or '{' or '('
+app/views/items/show.erb:13: syntax error, unexpected tIVAR, expecting do or '{' or '('
+app/views/items/show.erb:13: syntax error, unexpected tIVAR, expecting do or '{' or '('
+Started GET "/items/68" for ::1 at 2020-11-09 12:36:45 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 68], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 3.1ms | Allocations: 1984)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.4ms | Allocations: 1477)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.4ms | Allocations: 9346)
+
+
+Started GET "/items/68" for ::1 at 2020-11-09 12:36:47 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 68], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 4.0ms | Allocations: 1622)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.7ms | Allocations: 1236)
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.7ms | Allocations: 7586)
+
+
+Started GET "/items/68" for ::1 at 2020-11-09 12:36:50 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 68], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 4.6ms | Allocations: 1623)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.7ms | Allocations: 1236)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.9ms | Allocations: 7583)
+
+
+Started GET "/items" for ::1 at 2020-11-09 12:36:57 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 7.0ms | Allocations: 3868)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.5ms | Allocations: 1301)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.7ms | Allocations: 9508)
+
+
+Started GET "/items/68" for ::1 at 2020-11-09 12:37:00 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 68], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 3.3ms | Allocations: 1621)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.1ms | Allocations: 1236)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.5ms | Allocations: 7586)
+
+
+Started GET "/items/68" for ::1 at 2020-11-09 12:37:02 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 68], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 3.1ms | Allocations: 1621)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.1ms | Allocations: 1236)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.5ms | Allocations: 7583)
+
+
+Started GET "/items/68" for ::1 at 2020-11-09 12:41:58 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 68], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 2.9ms | Allocations: 1957)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.8ms | Allocations: 1477)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.4ms | Allocations: 9239)
+
+
+Started GET "/items/68/edit" for ::1 at 2020-11-09 12:42:00 -0500
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:32:in `edit'
+  Rendering items/edit.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.7ms | Allocations: 181)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 5.9ms | Allocations: 2121)
+  Rendered items/edit.erb within layouts/application (Duration: 8.4ms | Allocations: 2818)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.1ms | Allocations: 1242)
+Completed 200 OK in 25ms (Views: 22.1ms | ActiveRecord: 0.5ms | Allocations: 8903)
+
+
+Started PATCH "/items/68" for ::1 at 2020-11-09 12:42:20 -0500
+Processing by ItemsController#update as HTML
+  Parameters: {"authenticity_token"=>"MWYOUzGN9teeRQjIQGGIxBbfgsCsTbuqGnHFtV6p40mTzSjRI09rpsz25JQ4WdYaCbJuv2mpS/CqcsIQl4mu6A==", "item"=>{"name"=>"image testing", "seller_id"=>"2", "description"=>"t", "image"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR7tDa4C0F3Y0feRSTuU3kVkfULnxYxTNg8pQ&usqp=CAU", "asking_price"=>"4.0", "end_date"=>"2020-12-01"}, "commit"=>"Add Item", "id"=>"68"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:36:in `update'
+[31mUnpermitted parameter: :image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+Redirected to http://localhost:3000/items/68
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms | Allocations: 4018)
+
+
+Started GET "/items/68" for ::1 at 2020-11-09 12:42:20 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 68], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 2.1ms | Allocations: 1622)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.6ms | Allocations: 1236)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.4ms | Allocations: 7591)
+
+
+Started GET "/items" for ::1 at 2020-11-09 12:42:32 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 6.6ms | Allocations: 3828)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 3.1ms | Allocations: 1300)
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.8ms | Allocations: 9450)
+
+
+Started GET "/items/68" for ::1 at 2020-11-09 12:42:36 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 68], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 4.8ms | Allocations: 1622)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.5ms | Allocations: 1236)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.7ms | Allocations: 7583)
+
+
+Started GET "/items/68/edit" for ::1 at 2020-11-09 12:42:39 -0500
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:32:in `edit'
+  Rendering items/edit.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.0ms | Allocations: 15)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 3.4ms | Allocations: 1800)
+  Rendered items/edit.erb within layouts/application (Duration: 3.8ms | Allocations: 1946)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.5ms | Allocations: 1235)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.4ms | Allocations: 7888)
+
+
+Started GET "/items/68/edit" for ::1 at 2020-11-09 12:43:21 -0500
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:32:in `edit'
+  Rendering items/edit.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.4ms | Allocations: 180)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 3.8ms | Allocations: 2101)
+  Rendered items/edit.erb within layouts/application (Duration: 5.9ms | Allocations: 2794)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.1ms | Allocations: 1476)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.4ms | Allocations: 10067)
+
+
+Started GET "/items" for ::1 at 2020-11-09 12:45:27 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 6.4ms | Allocations: 3817)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.5ms | Allocations: 1300)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.6ms | Allocations: 9444)
+
+
+Started GET "/items/1" for ::1 at 2020-11-09 12:45:29 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 5.6ms | Allocations: 1958)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.1ms | Allocations: 1243)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.7ms | Allocations: 8064)
+
+
+Started GET "/items/1/edit" for ::1 at 2020-11-09 12:45:31 -0500
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:32:in `edit'
+  Rendering items/edit.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.0ms | Allocations: 15)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 4.1ms | Allocations: 1802)
+  Rendered items/edit.erb within layouts/application (Duration: 4.5ms | Allocations: 1948)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.8ms | Allocations: 1235)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.4ms | Allocations: 7893)
+
+
+Started PATCH "/items/1" for ::1 at 2020-11-09 12:45:42 -0500
+Processing by ItemsController#update as HTML
+  Parameters: {"authenticity_token"=>"fdQ2x8UIQ3OfJsvaZnB6jUrwZNjcKsqYHl8ZmU7a8TGrHgKIFJ1MsynWAvpE8sYRJ079v1BTYxEj4o1xBl/Hug==", "item"=>{"name"=>"SpaceX' Duck", "seller_id"=>"2", "description"=>"There was never a genius without a tincture of madness.", "image"=>"", "asking_price"=>"9", "end_date"=>"1998-06-11"}, "commit"=>"Add Item", "id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:36:in `update'
+[31mUnpermitted parameter: :image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+Redirected to http://localhost:3000/items/1
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms | Allocations: 4567)
+
+
+Started GET "/items/1" for ::1 at 2020-11-09 12:45:42 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 4.8ms | Allocations: 1622)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.8ms | Allocations: 1236)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.7ms | Allocations: 7585)
+
+
+Started GET "/items" for ::1 at 2020-11-09 12:45:48 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 6.5ms | Allocations: 3504)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 3.0ms | Allocations: 1293)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.7ms | Allocations: 8988)
+
+
+Started GET "/items/1" for ::1 at 2020-11-09 12:45:51 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 3.6ms | Allocations: 1622)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.2ms | Allocations: 1236)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.7ms | Allocations: 7582)
+
+
+Started GET "/items/1/edit" for ::1 at 2020-11-09 12:46:15 -0500
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:32:in `edit'
+  Rendering items/edit.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.0ms | Allocations: 15)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 4.5ms | Allocations: 1799)
+  Rendered items/edit.erb within layouts/application (Duration: 4.9ms | Allocations: 1945)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 3.0ms | Allocations: 1235)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.4ms | Allocations: 7887)
+
+
+Started PATCH "/items/1" for ::1 at 2020-11-09 12:46:21 -0500
+Processing by ItemsController#update as HTML
+  Parameters: {"authenticity_token"=>"qchyJPZHI98lFXLXecdYnnd6pq497LVs5lQh6ehxNIh/AkZrJ9IsH5Plu/dbReQCGsQ/ybGVHOXb6bUBoPQCAw==", "item"=>{"name"=>"SpaceX' Duck", "seller_id"=>"2", "description"=>"There was never a genius without a tincture of madness.", "image"=>"", "asking_price"=>"9.0", "end_date"=>"1998-06-11"}, "commit"=>"Add Item", "id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:36:in `update'
+[31mUnpermitted parameter: :image[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+Redirected to http://localhost:3000/items/1
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms | Allocations: 4563)
+
+
+Started GET "/items/1" for ::1 at 2020-11-09 12:46:21 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 2.3ms | Allocations: 1622)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.7ms | Allocations: 1236)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.4ms | Allocations: 7583)
+
+
+Started GET "/items/1/edit" for ::1 at 2020-11-09 12:47:03 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/jakeshort/Desktop/Flatiron/duckat/app/controllers/items_controller.rb:56: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/items_controller.rb:56: syntax error, unexpected end-of-input, expecting end
+app/controllers/items_controller.rb:56: syntax error, unexpected end-of-input, expecting end
+app/controllers/items_controller.rb:56: syntax error, unexpected end-of-input, expecting end
+Started GET "/items/1/edit" for ::1 at 2020-11-09 12:47:31 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:32:in `edit'
+  Rendering items/edit.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.0ms | Allocations: 15)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 10.6ms | Allocations: 7066)
+  Rendered items/edit.erb within layouts/application (Duration: 11.0ms | Allocations: 7212)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.1ms | Allocations: 1244)
+Completed 200 OK in 34ms (Views: 18.0ms | ActiveRecord: 1.8ms | Allocations: 22391)
+
+
+Started PATCH "/items/1" for ::1 at 2020-11-09 12:47:39 -0500
+Processing by ItemsController#update as HTML
+  Parameters: {"authenticity_token"=>"8Vf0riiNP2nOkmIUaVIjgFjpghDncwu2tcvQ1u80mfwGSPDHV1iAApddiDpNKmWafvYxhyvH2U3x4hTnHYjPVA==", "item"=>{"name"=>"SpaceX' Duck", "seller_id"=>"2", "description"=>"There was never a genius without a tincture of madness.", "image"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR7tDa4C0F3Y0feRSTuU3kVkfULnxYxTNg8pQ&usqp=CAU", "asking_price"=>"8.0", "end_date"=>"1998-06-11"}, "commit"=>"Add Item", "id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:36:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+Redirected to http://localhost:3000/items/1
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms | Allocations: 5291)
+
+
+Started GET "/items/1" for ::1 at 2020-11-09 12:47:39 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 12.5ms | Allocations: 6012)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.1ms | Allocations: 1236)
+Completed 200 OK in 43ms (Views: 21.0ms | ActiveRecord: 2.2ms | Allocations: 18406)
+
+
+Started GET "/items/1/edit" for ::1 at 2020-11-09 12:47:41 -0500
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:32:in `edit'
+  Rendering items/edit.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.4ms | Allocations: 15)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 14.4ms | Allocations: 1799)
+  Rendered items/edit.erb within layouts/application (Duration: 15.5ms | Allocations: 1945)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.4ms | Allocations: 1235)
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 0.4ms | Allocations: 7888)
+
+
+Started PATCH "/items/1" for ::1 at 2020-11-09 12:47:45 -0500
+Processing by ItemsController#update as HTML
+  Parameters: {"authenticity_token"=>"nRtEjWFG9w+DZU5rCKABy9uQP3UWVgXhF16EjxIjXRFL0XDCsNP4zzWVh0sqIr1Xti6mEpovrGgq4xBnWqZrmg==", "item"=>{"name"=>"SpaceX' Duck", "seller_id"=>"2", "description"=>"There was never a genius without a tincture of madness.", "image"=>"", "asking_price"=>"9", "end_date"=>"1998-06-11"}, "commit"=>"Add Item", "id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:36:in `update'
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+Redirected to http://localhost:3000/items/1
+Completed 302 Found in 12ms (ActiveRecord: 0.8ms | Allocations: 4540)
+
+
+Started GET "/items/1" for ::1 at 2020-11-09 12:47:45 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 5.0ms | Allocations: 1623)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 3.1ms | Allocations: 1236)
+Completed 200 OK in 22ms (Views: 18.0ms | ActiveRecord: 1.0ms | Allocations: 7585)
+
+
+Started GET "/items/1/edit" for ::1 at 2020-11-09 12:47:56 -0500
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:32:in `edit'
+  Rendering items/edit.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.0ms | Allocations: 15)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 4.2ms | Allocations: 1799)
+  Rendered items/edit.erb within layouts/application (Duration: 4.7ms | Allocations: 1945)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.6ms | Allocations: 1235)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.4ms | Allocations: 7891)
+
+
+Started PATCH "/items/1" for ::1 at 2020-11-09 12:48:02 -0500
+Processing by ItemsController#update as HTML
+  Parameters: {"authenticity_token"=>"qFEW+10vn6AEZYSZwwyFffAV844tWeWyjk5UOtMebL1+myK0jLqQYLKVTbnhjjnhnatq6aEgTDuz88DSm5taNg==", "item"=>{"name"=>"SpaceX' Duck", "seller_id"=>"2", "description"=>"There was never a genius without a tincture of madness.", "image"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR7tDa4C0F3Y0feRSTuU3kVkfULnxYxTNg8pQ&usqp=CAU", "asking_price"=>"8.0", "end_date"=>"1998-06-11"}, "commit"=>"Add Item", "id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:36:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+Redirected to http://localhost:3000/items/1
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms | Allocations: 4550)
+
+
+Started GET "/items/1" for ::1 at 2020-11-09 12:48:02 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 2.5ms | Allocations: 1622)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.8ms | Allocations: 1236)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.4ms | Allocations: 7584)
+
+
+Started GET "/items/new" for ::1 at 2020-11-09 12:48:05 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.1ms | Allocations: 15)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 6.2ms | Allocations: 1741)
+  Rendered items/new.erb within layouts/application (Duration: 8.5ms | Allocations: 1998)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.7ms | Allocations: 1241)
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 0.2ms | Allocations: 7559)
+
+
+Started POST "/items" for ::1 at 2020-11-09 12:48:14 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"W9Dzh9iUsoVap0FWFOL/FRtDDEcVH3jA+J9/bTVkpmYyPgigb+P5MijcahQaijle22FFjDpDOkYVLSL4bBhXgg==", "item"=>{"name"=>"asdf", "seller_id"=>"2", "description"=>"asdf", "image"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR7tDa4C0F3Y0feRSTuU3kVkfULnxYxTNg8pQ&usqp=CAU", "asking_price"=>"55", "end_date"=>"2020-11-26"}, "commit"=>"Add Item"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "seller_id", "asking_price", "end_date", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "asdf"], ["description", "asdf"], ["seller_id", 2], ["asking_price", 55.0], ["end_date", "2020-11-26"], ["created_at", "2020-11-09 17:48:14.310664"], ["updated_at", "2020-11-09 17:48:14.310664"], ["image", "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR7tDa4C0F3Y0feRSTuU3kVkfULnxYxTNg8pQ&usqp=CAU"]]
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:24:in `create'
+Redirected to http://localhost:3000/items/69
+Completed 302 Found in 8ms (ActiveRecord: 1.8ms | Allocations: 4197)
+
+
+Started GET "/items/69" for ::1 at 2020-11-09 12:48:14 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"69"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 69], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 2.2ms | Allocations: 1623)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 3.0ms | Allocations: 1236)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.4ms | Allocations: 7588)
+
+
+Started GET "/items/69/edit" for ::1 at 2020-11-09 12:48:18 -0500
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"69"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:32:in `edit'
+  Rendering items/edit.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.1ms | Allocations: 15)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 3.4ms | Allocations: 1807)
+  Rendered items/edit.erb within layouts/application (Duration: 4.0ms | Allocations: 1953)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 36.9ms | Allocations: 1237)
+Completed 200 OK in 52ms (Views: 49.5ms | ActiveRecord: 0.5ms | Allocations: 7896)
+
+
+Started PATCH "/items/69" for ::1 at 2020-11-09 12:48:22 -0500
+Processing by ItemsController#update as HTML
+  Parameters: {"authenticity_token"=>"mbfUvm0LpMV52zZy6ocm4Rr2lwdTzqCo8dK+A1LG6aTDPjLcBsFaPkKklKASmtpQbSuF9f4nQA56zhmfq6zsIg==", "item"=>{"name"=>"asdf", "seller_id"=>"2", "description"=>"asdf", "image"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR7tDa4C0F3Y0feRSTuU3kVkfULnxYxTNg8pQ&usqp=CAU", "asking_price"=>"5", "end_date"=>"2020-11-26"}, "commit"=>"Add Item", "id"=>"69"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:36:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[36mItem Update (0.9ms)[0m  [1m[33mUPDATE "items" SET "asking_price" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["asking_price", 5.0], ["updated_at", "2020-11-09 17:48:22.752896"], ["id", 69]]
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+Redirected to http://localhost:3000/items/69
+Completed 302 Found in 11ms (ActiveRecord: 2.2ms | Allocations: 4833)
+
+
+Started GET "/items/69" for ::1 at 2020-11-09 12:48:22 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"69"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 69], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 2.3ms | Allocations: 1622)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.8ms | Allocations: 1236)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.4ms | Allocations: 7584)
+
+
+Started GET "/items/69/edit" for ::1 at 2020-11-09 12:48:26 -0500
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"69"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:32:in `edit'
+  Rendering items/edit.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.0ms | Allocations: 15)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 3.6ms | Allocations: 1806)
+  Rendered items/edit.erb within layouts/application (Duration: 4.0ms | Allocations: 1952)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.7ms | Allocations: 1235)
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.4ms | Allocations: 7898)
+
+
+Started GET "/logout" for ::1 at 2020-11-09 12:48:49 -0500
+Processing by LoginController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 282)
+
+
+Started GET "/" for ::1 at 2020-11-09 12:48:49 -0500
+Processing by ApplicationController#home as HTML
+  Rendering application/home.erb within layouts/application
+  Rendered application/home.erb within layouts/application (Duration: 0.7ms | Allocations: 140)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.erb (Duration: 0.3ms | Allocations: 92)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 4669)
+
+
+Started GET "/login" for ::1 at 2020-11-09 12:48:50 -0500
+Processing by LoginController#login_form as HTML
+  Rendering login/login_form.erb within layouts/application
+  Rendered login/login_form.erb within layouts/application (Duration: 2.3ms | Allocations: 379)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.erb (Duration: 0.3ms | Allocations: 78)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 5188)
+
+
+Started POST "/login" for ::1 at 2020-11-09 12:48:53 -0500
+Processing by LoginController#login as HTML
+  Parameters: {"authenticity_token"=>"simstefM3+W7DdETw8Pt6mvo61MtyKIkGu/K62b9wpelWR3ZgXgO1bhb797AWnDuXFjANYFIwmKKb+vJ1ehb1g==", "username"=>"Klimt", "commit"=>"Login"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 330)
+
+
+Started GET "/" for ::1 at 2020-11-09 12:48:53 -0500
+Processing by ApplicationController#home as HTML
+  Rendering application/home.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered application/home.erb within layouts/application (Duration: 1.6ms | Allocations: 1116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.5ms | Allocations: 1256)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.2ms | Allocations: 6530)
+
+
+Started GET "/items" for ::1 at 2020-11-09 12:48:55 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 6.4ms | Allocations: 3573)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.7ms | Allocations: 1300)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.7ms | Allocations: 9069)
+
+
+Started GET "/items/1" for ::1 at 2020-11-09 12:48:57 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 5.5ms | Allocations: 1623)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.3ms | Allocations: 1236)
+Completed 200 OK in 18ms (Views: 14.9ms | ActiveRecord: 0.8ms | Allocations: 7584)
+
+
+Started GET "/items/1/edit" for ::1 at 2020-11-09 12:49:04 -0500
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:32:in `edit'
+  Rendering items/edit.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.1ms | Allocations: 15)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 4.5ms | Allocations: 1801)
+  Rendered items/edit.erb within layouts/application (Duration: 5.2ms | Allocations: 1947)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.6ms | Allocations: 1235)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.5ms | Allocations: 7891)
+
+
+Started PATCH "/items/1" for ::1 at 2020-11-09 12:49:22 -0500
+Processing by ItemsController#update as HTML
+  Parameters: {"authenticity_token"=>"+fMHDu25c/bLt5KXO8rQqIdcUWDk5ECH3W6NzKv0+WEvOTNBPCx8Nn1HW7cZSGw06uLIB2id6Q7g0xkk43HP6g==", "item"=>{"name"=>"SpaceX' Duck", "seller_id"=>"2", "description"=>"There was never a genius without a tincture of madness.", "image"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRF2VFyJnXfu9NJN0rus5JvSi8BeHX_lhG-Vw&usqp=CAU", "asking_price"=>"8.0", "end_date"=>"1998-06-11"}, "commit"=>"Add Item", "id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:36:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+Redirected to http://localhost:3000/items/1
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms | Allocations: 4547)
+
+
+Started GET "/items/1" for ::1 at 2020-11-09 12:49:22 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 2.2ms | Allocations: 1622)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.5ms | Allocations: 1236)
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 0.5ms | Allocations: 7588)
+
+
+Started GET "/items/1/edit" for ::1 at 2020-11-09 12:49:26 -0500
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:32:in `edit'
+  Rendering items/edit.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.0ms | Allocations: 15)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 4.7ms | Allocations: 1799)
+  Rendered items/edit.erb within layouts/application (Duration: 5.3ms | Allocations: 1945)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.2ms | Allocations: 1235)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.4ms | Allocations: 7887)
+
+
+Started PATCH "/items/1" for ::1 at 2020-11-09 12:49:41 -0500
+Processing by ItemsController#update as HTML
+  Parameters: {"authenticity_token"=>"aZF/74DK8svlwtLhNH1mx5jprVophOS/8ZtiORStOH6/W0ugUV/9C1MyG8EW/9pb9Vc0PaX9TTbMJvbRXCgO9Q==", "item"=>{"name"=>"SpaceX' Duck", "seller_id"=>"2", "description"=>"There was never a genius without a tincture of madness.", "image"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRF2VFyJnXfu9NJN0rus5JvSi8BeHX_lhG-Vw&usqp=CAU", "asking_price"=>"8.0", "end_date"=>"1998-06-11"}, "commit"=>"Add Item", "id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:36:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+Redirected to http://localhost:3000/items/1
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 4551)
+
+
+Started GET "/items/1" for ::1 at 2020-11-09 12:49:41 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 2.9ms | Allocations: 1622)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.4ms | Allocations: 1236)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.5ms | Allocations: 7578)
+
+
+Started GET "/items" for ::1 at 2020-11-09 12:49:43 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 5.3ms | Allocations: 3544)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.7ms | Allocations: 1293)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.6ms | Allocations: 9031)
+
+
+Started GET "/items/68" for ::1 at 2020-11-09 12:49:45 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 68], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 3.4ms | Allocations: 1621)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.6ms | Allocations: 1236)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.6ms | Allocations: 7585)
+
+
+Started GET "/items" for ::1 at 2020-11-09 12:49:47 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 5.4ms | Allocations: 3544)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.4ms | Allocations: 1293)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.5ms | Allocations: 9031)
+
+
+Started GET "/items/new" for ::1 at 2020-11-09 12:49:49 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.0ms | Allocations: 15)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 3.4ms | Allocations: 1731)
+  Rendered items/new.erb within layouts/application (Duration: 3.8ms | Allocations: 1877)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.7ms | Allocations: 1235)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.2ms | Allocations: 7298)
+
+
+Started POST "/items" for ::1 at 2020-11-09 12:50:05 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"xya8JRf4HR+oyq3CM0k7KFvWouJi14KoFIp5j1F+V0SuyEcCoI9WqNqxhoA9If1jm/TrKU2LwC75OCQaCAKmoA==", "item"=>{"name"=>"new duck for Matteo", "seller_id"=>"2", "description"=>"Matteo test duck", "image"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRF2VFyJnXfu9NJN0rus5JvSi8BeHX_lhG-Vw&usqp=CAU", "asking_price"=>"1000", "end_date"=>"2020-11-26"}, "commit"=>"Add Item"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "seller_id", "asking_price", "end_date", "created_at", "updated_at", "image") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "new duck for Matteo"], ["description", "Matteo test duck"], ["seller_id", 2], ["asking_price", 1000.0], ["end_date", "2020-11-26"], ["created_at", "2020-11-09 17:50:05.193736"], ["updated_at", "2020-11-09 17:50:05.193736"], ["image", "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRF2VFyJnXfu9NJN0rus5JvSi8BeHX_lhG-Vw&usqp=CAU"]]
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:24:in `create'
+Redirected to http://localhost:3000/items/70
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms | Allocations: 4070)
+
+
+Started GET "/items/70" for ::1 at 2020-11-09 12:50:05 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"70"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 70], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 2.6ms | Allocations: 1622)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.4ms | Allocations: 1236)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.5ms | Allocations: 7585)
+
+
+Started GET "/items/70/edit" for ::1 at 2020-11-09 12:50:16 -0500
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"70"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:32:in `edit'
+  Rendering items/edit.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.1ms | Allocations: 15)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 4.3ms | Allocations: 1806)
+  Rendered items/edit.erb within layouts/application (Duration: 5.0ms | Allocations: 1952)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.3ms | Allocations: 1235)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.4ms | Allocations: 7896)
+
+
+Started PATCH "/items/70" for ::1 at 2020-11-09 12:50:20 -0500
+Processing by ItemsController#update as HTML
+  Parameters: {"authenticity_token"=>"wEvn9jdzvXk29ZBFHSeBLIZE871VZNJ88UFBlTzQDB7gx82IYsVF0SwTQrcRkJNc5B6iVJaZnUeN7+jWZx6otw==", "item"=>{"name"=>"new duck for Matteo", "seller_id"=>"2", "description"=>"Matteo test duck", "image"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRF2VFyJnXfu9NJN0rus5JvSi8BeHX_lhG-Vw&usqp=CAU", "asking_price"=>"10000.0", "end_date"=>"2020-11-26"}, "commit"=>"Add Item", "id"=>"70"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:36:in `update'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "asking_price" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["asking_price", 10000.0], ["updated_at", "2020-11-09 17:50:20.992215"], ["id", 70]]
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+Redirected to http://localhost:3000/items/70
+Completed 302 Found in 10ms (ActiveRecord: 1.8ms | Allocations: 4754)
+
+
+Started GET "/items/70" for ::1 at 2020-11-09 12:50:21 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"70"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 70], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 2.2ms | Allocations: 1622)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.9ms | Allocations: 1236)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.4ms | Allocations: 7588)
+
+
+Started GET "/items/70/edit" for ::1 at 2020-11-09 12:50:51 -0500
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"70"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:32:in `edit'
+  Rendering items/edit.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.0ms | Allocations: 15)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 3.9ms | Allocations: 1806)
+  Rendered items/edit.erb within layouts/application (Duration: 4.4ms | Allocations: 1952)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 3.3ms | Allocations: 1235)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.4ms | Allocations: 7898)
+
+
+Started PATCH "/items/70" for ::1 at 2020-11-09 12:51:01 -0500
+Processing by ItemsController#update as HTML
+  Parameters: {"authenticity_token"=>"rFBHorL8QQ3yrM17iXTyRfWpY3Ul0Jn+9tO6PZrApRGM3G3c50q5pehKH4mFw+A1l/MynOYt1sWKfRN+wQ4BuA==", "item"=>{"name"=>"new duck for Matteo", "seller_id"=>"2", "description"=>"Matteo test duck", "image"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS4X4O8Hhl1hCDJWioT8T-LpsEMzdxZm_eNiA&usqp=CAU", "asking_price"=>"10000.0", "end_date"=>"2020-11-26"}, "commit"=>"Add Item", "id"=>"70"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:36:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "image" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["image", "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS4X4O8Hhl1hCDJWioT8T-LpsEMzdxZm_eNiA&usqp=CAU"], ["updated_at", "2020-11-09 17:51:01.819057"], ["id", 70]]
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+Redirected to http://localhost:3000/items/70
+Completed 302 Found in 9ms (ActiveRecord: 1.8ms | Allocations: 4758)
+
+
+Started GET "/items/70" for ::1 at 2020-11-09 12:51:01 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"70"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 70], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 70], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 2.9ms | Allocations: 1622)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.1ms | Allocations: 1236)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.4ms | Allocations: 7580)
+
+
+Started GET "/items" for ::1 at 2020-11-09 12:51:06 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 6.7ms | Allocations: 3584)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.7ms | Allocations: 1293)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.5ms | Allocations: 9072)
+
+
+Started GET "/items/1" for ::1 at 2020-11-09 12:51:08 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 4.7ms | Allocations: 1622)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.5ms | Allocations: 1236)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.7ms | Allocations: 7586)
+
+
+Started GET "/items/1/edit" for ::1 at 2020-11-09 12:51:09 -0500
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:32:in `edit'
+  Rendering items/edit.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.0ms | Allocations: 15)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 3.5ms | Allocations: 1799)
+  Rendered items/edit.erb within layouts/application (Duration: 3.8ms | Allocations: 1945)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 3.4ms | Allocations: 1235)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.4ms | Allocations: 7888)
+
+
+Started PATCH "/items/1" for ::1 at 2020-11-09 12:51:11 -0500
+Processing by ItemsController#update as HTML
+  Parameters: {"authenticity_token"=>"H/1NJN7fIK69ZooJZoITDLLcQx08+CsMex6vOz2QidLJN3lrD0ovbguWQylEAK+Q32LaerCBgoVGozvTdRW/WQ==", "item"=>{"name"=>"SpaceX' Duck", "seller_id"=>"2", "description"=>"There was never a genius without a tincture of madness.", "image"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS4X4O8Hhl1hCDJWioT8T-LpsEMzdxZm_eNiA&usqp=CAU", "asking_price"=>"8.0", "end_date"=>"1998-06-11"}, "commit"=>"Add Item", "id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:36:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:37:in `update'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/items_controller.rb:37:in `update'
+Redirected to http://localhost:3000/items/1
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms | Allocations: 4547)
+
+
+Started GET "/items/1" for ::1 at 2020-11-09 12:51:11 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:19
+  Rendered items/show.erb within layouts/application (Duration: 2.4ms | Allocations: 1622)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.6ms | Allocations: 1236)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.5ms | Allocations: 7580)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" LIMIT ?[0m  [["LIMIT", 11]]

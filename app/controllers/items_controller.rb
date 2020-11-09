@@ -49,7 +49,8 @@ class ItemsController < ApplicationController
             :description,
             :seller_id,
             :asking_price,
-            :end_date
+            :end_date,
+            :image
         )
     end
 end
