@@ -1,4 +1,7 @@
 class ItemsController < ApplicationController
+
+    before_action :require_login, only: [:show, :new, :create, :edit, :update, :destroy]
+    
     def index
         case params[:list]
         when "sale"
@@ -52,4 +55,8 @@ class ItemsController < ApplicationController
             :end_date
         )
     end
+
+    def require_login
+        return head(:forbidden) unless logged_in?
+      end
 end

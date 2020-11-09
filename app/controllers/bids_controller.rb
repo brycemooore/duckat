@@ -1,4 +1,7 @@
 class BidsController < ApplicationController
+
+  before_action :require_login, only: [:show, :new, :create]
+
   def index
     @bids = Bid.where user_id: current_user.id
   end
@@ -29,6 +32,10 @@ class BidsController < ApplicationController
 
   def bid_params
     params.require(:bid).permit(:user_id, :item_id, :bid_amount)
+  end
+
+  def require_login
+    return head(:forbidden) unless session.include? :user_id
   end
 
 end
