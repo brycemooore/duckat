@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :new, :create, :edit, :update, :destroy]
   resources :items
   resources :bids, only: [:index, :show, :new, :create, :destroy]
+  
 
   get '/', to: 'application#home', as: 'home'
   get '/login', to: 'login#login_form', as: 'login_form'

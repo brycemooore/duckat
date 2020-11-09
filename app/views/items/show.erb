@@ -8,15 +8,8 @@
     <% if @item.seller_id == current_user.id  %>
         <%= button_tag "MY ITEM"%>
     <% else %>
-        <%= render partial: 'shared/errors', locals: {object: @bid} %>
-        <%= form_for @bid, method: :post do |f| %>
-            <%= f.label :bid_amount,"Place Bid:" %>
-            <%= f.number_field :bid_amount %>
-            <%= f.hidden_field :user_id, value: current_user.id %>
-            <%= f.hidden_field :item_id, value: @item.id %>
-            <%= f.submit %>
-        <% end %>
-    <% end %>
+        <%= link_to "Place Bid", new_bid_path(item_id: @item.id) %>
+    <% end %> 
 </h3>
 
 <% if @item.tags.any? %>

@@ -76424,3 +76424,2544 @@ Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 431
 >>>>>>> 994bd0c54fbdab8b248ba6ce8f2efa9711c7fcad
 
 
+Started GET "/items?list=all&commit=Display+Items" for ::1 at 2020-11-06 17:52:23 -0500
+Started GET "/items?list=all&commit=Display+Items" for ::1 at 2020-11-06 17:52:23 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemsController#index as HTML
+  Parameters: {"list"=>"all", "commit"=>"Display Items"}
+Processing by ItemsController#index as HTML
+  Parameters: {"list"=>"all", "commit"=>"Display Items"}
+  Rendering items/index.erb within layouts/application
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 12.6ms | Allocations: 9053)
+  Rendered items/index.erb within layouts/application (Duration: 18.4ms | Allocations: 12976)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 23.2ms | Allocations: 8639)
+  Rendered shared/_nav.erb (Duration: 23.2ms | Allocations: 8621)
+Completed 200 OK in 106ms (Views: 97.5ms | ActiveRecord: 2.4ms | Allocations: 39854)
+
+
+Completed 200 OK in 119ms (Views: 102.7ms | ActiveRecord: 0.7ms | Allocations: 44036)
+
+
+Started GET "/items?list=sale&commit=Display+Items" for ::1 at 2020-11-06 17:52:26 -0500
+Processing by ItemsController#index as HTML
+  Parameters: {"list"=>"sale", "commit"=>"Display Items"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."seller_id" != ?[0m  [["seller_id", 2]]
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 4.0ms | Allocations: 3128)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.6ms | Allocations: 1236)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.6ms | Allocations: 9258)
+
+
+Started GET "/items?list=all&commit=Display+Items" for ::1 at 2020-11-06 17:52:29 -0500
+Processing by ItemsController#index as HTML
+  Parameters: {"list"=>"all", "commit"=>"Display Items"}
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 3.6ms | Allocations: 3278)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.7ms | Allocations: 1293)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.4ms | Allocations: 8873)
+
+
+Started GET "/items?list=selling&commit=Display+Items" for ::1 at 2020-11-06 17:52:34 -0500
+Processing by ItemsController#index as HTML
+  Parameters: {"list"=>"selling", "commit"=>"Display Items"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."seller_id" = ?[0m  [["seller_id", 2]]
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 2.1ms | Allocations: 1079)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.1ms | Allocations: 1236)
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 0.3ms | Allocations: 7179)
+
+
+Started GET "/items?list=sale&commit=Display+Items" for ::1 at 2020-11-06 17:52:36 -0500
+Processing by ItemsController#index as HTML
+  Parameters: {"list"=>"sale", "commit"=>"Display Items"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."seller_id" != ?[0m  [["seller_id", 2]]
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 6.0ms | Allocations: 3092)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.4ms | Allocations: 1236)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.8ms | Allocations: 9200)
+
+
+Started GET "/" for ::1 at 2020-11-09 10:24:35 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#home as HTML
+  Rendering application/home.erb within layouts/application
+  Rendered application/home.erb within layouts/application (Duration: 1.2ms | Allocations: 539)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.erb (Duration: 1.2ms | Allocations: 353)
+Completed 200 OK in 41ms (Views: 34.5ms | ActiveRecord: 0.0ms | Allocations: 12019)
+
+
+Started GET "/login" for ::1 at 2020-11-09 10:24:41 -0500
+Processing by LoginController#login_form as HTML
+  Rendering login/login_form.erb within layouts/application
+  Rendered login/login_form.erb within layouts/application (Duration: 1.2ms | Allocations: 400)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.erb (Duration: 0.2ms | Allocations: 78)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 5236)
+
+
+Started POST "/login" for ::1 at 2020-11-09 10:24:45 -0500
+Processing by LoginController#login as HTML
+  Parameters: {"authenticity_token"=>"sO0ETP8d6bcK1Vq/kv930Hxf94Oh0CG8SlXRhk7/1U2nnbUgmak4hwmDZHKRZurUS+/c5Q1QQfra1fCk/epMDA==", "username"=>"Klimt", "commit"=>"Login"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 362)
+
+
+Started GET "/" for ::1 at 2020-11-09 10:24:45 -0500
+Processing by ApplicationController#home as HTML
+  Rendering application/home.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered application/home.erb within layouts/application (Duration: 16.9ms | Allocations: 7666)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 1.5ms | Allocations: 1259)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 1.2ms | Allocations: 13079)
+
+
+Started GET "/items" for ::1 at 2020-11-09 10:24:48 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 20.9ms | Allocations: 9004)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 2.6ms | Allocations: 1300)
+Completed 200 OK in 46ms (Views: 30.9ms | ActiveRecord: 2.2ms | Allocations: 18110)
+
+
+Started GET "/items/3" for ::1 at 2020-11-09 10:25:06 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_errors.erb (Duration: 0.7ms | Allocations: 182)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/show.erb within layouts/application (Duration: 11800.8ms | Allocations: 58709)
+Completed 500 Internal Server Error in 11831ms (ActiveRecord: 1.8ms | Allocations: 74565)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1
+app/views/items/show.erb:18
+app/views/items/show.erb:12
+Started GET "/" for ::1 at 2020-11-09 10:26:34 -0500
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#home as HTML
+  Rendering application/home.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered application/home.erb within layouts/application (Duration: 287.4ms | Allocations: 1991405)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 63.1ms | Allocations: 466982)
+Completed 200 OK in 492ms (Views: 453.6ms | ActiveRecord: 13.1ms | Allocations: 3626319)
+
+
+Started GET "/items" for ::1 at 2020-11-09 10:26:44 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (7.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 418.3ms | Allocations: 3754384)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 56.2ms | Allocations: 473089)
+Completed 200 OK in 714ms (Views: 560.6ms | ActiveRecord: 27.4ms | Allocations: 6405888)
+
+
+Started GET "/items/new" for ::1 at 2020-11-09 10:27:18 -0500
+Processing by ItemsController#new as HTML
+  Rendering items/new.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 6.2ms | Allocations: 39647)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 8511.1ms | Allocations: 96862709)
+  Rendered items/new.erb within layouts/application (Duration: 8542.0ms | Allocations: 97065390)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 41.0ms | Allocations: 450942)
+Completed 200 OK in 8699ms (Views: 8666.0ms | ActiveRecord: 1.7ms | Allocations: 98663281)
+
+
+Started POST "/items" for ::1 at 2020-11-09 10:27:41 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"zNnQwFJf1LvBtsExiWRO8FQct9ztBcpMmf8q1j/FUTKlNyvn5SifDLPN6nOHDIi7lD7+F8JZiMp0TXdDZrmg1g==", "item"=>{"name"=>"testing a duck", "seller_id"=>"2", "description"=>"test duck", "asking_price"=>"50", "end_date"=>"2020-11-10"}, "commit"=>"Add Item"}
+Completed 500 Internal Server Error in 21209ms (ActiveRecord: 0.0ms | Allocations: 393917)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/items_controller.rb:25:in `create'
+Started POST "/items" for ::1 at 2020-11-09 10:29:54 -0500
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"zNnQwFJf1LvBtsExiWRO8FQct9ztBcpMmf8q1j/FUTKlNyvn5SifDLPN6nOHDIi7lD7+F8JZiMp0TXdDZrmg1g==", "item"=>{"name"=>"testing a duck", "seller_id"=>"2", "description"=>"test duck", "asking_price"=>"50", "end_date"=>"2020-11-10"}, "commit"=>"Add Item"}
+  [1m[35m (5.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[36mItem Create (2.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "description", "seller_id", "asking_price", "end_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "testing a duck"], ["description", "test duck"], ["seller_id", 2], ["asking_price", 50.0], ["end_date", "2020-11-10"], ["created_at", "2020-11-09 15:29:57.680691"], ["updated_at", "2020-11-09 15:29:57.680691"]]
+  ↳ app/controllers/items_controller.rb:24:in `create'
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/items_controller.rb:24:in `create'
+Redirected to http://localhost:3000/items/63
+Completed 302 Found in 635ms (ActiveRecord: 31.8ms | Allocations: 5827823)
+
+
+Started GET "/items/63" for ::1 at 2020-11-09 10:29:57 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"63"}
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (6.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 63], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:22
+  Rendered items/show.erb within layouts/application (Duration: 270.6ms | Allocations: 2583956)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 47.8ms | Allocations: 503267)
+Completed 200 OK in 608ms (Views: 401.7ms | ActiveRecord: 33.5ms | Allocations: 5886230)
+
+
+Started GET "/items" for ::1 at 2020-11-09 10:30:01 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (8.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 243.9ms | Allocations: 2474756)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 48.6ms | Allocations: 473966)
+Completed 200 OK in 411ms (Views: 380.5ms | ActiveRecord: 9.9ms | Allocations: 4061101)
+
+
+Started GET "/items/9" for ::1 at 2020-11-09 10:30:02 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_errors.erb (Duration: 1.4ms | Allocations: 11697)
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 9], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:22
+  Rendered items/show.erb within layouts/application (Duration: 137.2ms | Allocations: 1177632)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 44.8ms | Allocations: 450936)
+Completed 200 OK in 320ms (Views: 272.6ms | ActiveRecord: 5.2ms | Allocations: 2936453)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 10:30:07 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"PwAa7BK+Z4VHabcxaqtJ+OrgSnhNNKfI9f7ti4HAqD2hTqxySKjE9AfwR7bLuSeB+D2omLbkS+sm+eWZlJ0w/w==", "bid"=>{"bid_amount"=>"2", "user_id"=>"2", "item_id"=>"9"}, "commit"=>"Create Bid"}
+Completed 500 Internal Server Error in 222330ms (ActiveRecord: 0.0ms | Allocations: 582391)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/bids_controller.rb:18:in `create'
+Started GET "/items/9" for ::1 at 2020-11-09 10:33:52 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_errors.erb (Duration: 2.4ms | Allocations: 40494)
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 9], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:22
+  Rendered items/show.erb within layouts/application (Duration: 424.6ms | Allocations: 4217599)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 50.0ms | Allocations: 488580)
+Completed 200 OK in 1054ms (Views: 569.4ms | ActiveRecord: 35.8ms | Allocations: 9865830)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 10:34:05 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"eNEgXyQnR+qWOl4WRImJEKUeTxLgmmhfzh7AP9QJhg6PziQ2W/L4gc/1tDhg8c8KgwH8hSwuuqSKNwQOJrXQpg==", "bid"=>{"bid_amount"=>"-2", "user_id"=>"2", "item_id"=>"9"}, "commit"=>"Create Bid"}
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:17:in `create'
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:17:in `create'
+  [1m[36mItem Load (5.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:17:in `create'
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:17:in `create'
+Redirected to http://localhost:3000/items/9
+Completed 302 Found in 192ms (ActiveRecord: 8.9ms | Allocations: 1836086)
+
+
+Started GET "/items/9" for ::1 at 2020-11-09 10:34:06 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_errors.erb (Duration: 5.2ms | Allocations: 12165)
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 9], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:22
+  Rendered items/show.erb within layouts/application (Duration: 118.1ms | Allocations: 1105865)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 46.9ms | Allocations: 450936)
+Completed 200 OK in 301ms (Views: 260.4ms | ActiveRecord: 4.9ms | Allocations: 2862612)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 10:36:13 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"jHJVKiYM+hWeMl9Csi+xkoZr1qmo+f0WwQTfEEAf3xx7bVFDWdlFfsf9tWyWV/eIoHRlPmRNL+2FLRshsqOJtA==", "bid"=>{"bid_amount"=>"-2", "user_id"=>"2", "item_id"=>"9"}, "commit"=>"Create Bid"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:17:in `create'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:17:in `create'
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:17:in `create'
+  [1m[35m (6.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:17:in `create'
+Redirected to http://localhost:3000/items/9
+Completed 302 Found in 155ms (ActiveRecord: 10.0ms | Allocations: 1485504)
+
+
+Started GET "/items/9" for ::1 at 2020-11-09 10:36:13 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_errors.erb (Duration: 3.1ms | Allocations: 40494)
+  Rendered items/show.erb within layouts/application (Duration: 106181.7ms | Allocations: 595542)
+Completed 500 Internal Server Error in 106258ms (ActiveRecord: 2.2ms | Allocations: 1255398)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1
+app/views/items/show.erb:13
+Started GET "/items/9" for ::1 at 2020-11-09 10:38:03 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (16.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_errors.erb (Duration: 0.9ms | Allocations: 12165)
+  Rendered items/show.erb within layouts/application (Duration: 7875.4ms | Allocations: 1879712)
+Completed 500 Internal Server Error in 8301ms (ActiveRecord: 48.3ms | Allocations: 6036695)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1
+app/views/items/show.erb:13
+Started GET "/items/9" for ::1 at 2020-11-09 10:38:41 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_errors.erb (Duration: 0.7ms | Allocations: 12165)
+  Rendered items/show.erb within layouts/application (Duration: 28049.3ms | Allocations: 277120)
+Completed 500 Internal Server Error in 28123ms (ActiveRecord: 6.9ms | Allocations: 873615)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1
+app/views/items/show.erb:13
+Started GET "/items/9" for ::1 at 2020-11-09 10:39:10 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mItem Load (6.6ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_errors.erb (Duration: 0.9ms | Allocations: 11905)
+  Rendered items/show.erb within layouts/application (Duration: 4427.8ms | Allocations: 17284761)
+Completed 500 Internal Server Error in 5189ms (ActiveRecord: 12.3ms | Allocations: 24773066)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1
+app/views/items/show.erb:13
+Started GET "/items/9" for ::1 at 2020-11-09 10:39:24 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_errors.erb (Duration: 212.1ms | Allocations: 1138900)
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 9], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:23
+  Rendered items/show.erb within layouts/application (Duration: 6800.2ms | Allocations: 68436002)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 49.3ms | Allocations: 590333)
+Completed 200 OK in 9971ms (Views: 8481.4ms | ActiveRecord: 12.9ms | Allocations: 94868915)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 10:39:45 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"eej8uest3OQ5jLJAHsfH+g2W/htq92v7W0FOnNu+e9CO9/jQlPhjj2BDWG46v4HgK4lNjKZDuQAfaIqtKQIteA==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"9"}, "commit"=>"Create Bid"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:17:in `create'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:17:in `create'
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:17:in `create'
+  [1m[35m (7.9ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:17:in `create'
+Redirected to http://localhost:3000/items/9
+Completed 302 Found in 161ms (ActiveRecord: 11.0ms | Allocations: 1855993)
+
+
+Started GET "/items/9" for ::1 at 2020-11-09 10:39:45 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_errors.erb (Duration: 0.7ms | Allocations: 12165)
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (9.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 9], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:23
+  Rendered items/show.erb within layouts/application (Duration: 98.5ms | Allocations: 1105618)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 38.0ms | Allocations: 450936)
+Completed 200 OK in 256ms (Views: 213.7ms | ActiveRecord: 12.2ms | Allocations: 2864801)
+
+
+Started GET "/items/9" for ::1 at 2020-11-09 10:42:55 -0500
+  
+ArgumentError (Invalid route name, already in use: 'item' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+https://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:10:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/items/9" for ::1 at 2020-11-09 10:43:14 -0500
+  
+ArgumentError (Invalid route name, already in use: 'item' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+https://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:10:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/items/" for ::1 at 2020-11-09 10:43:27 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/items"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/items/" for ::1 at 2020-11-09 10:48:22 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (11.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 331.6ms | Allocations: 3886740)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (8.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 178.1ms | Allocations: 2075623)
+Completed 200 OK in 710ms (Views: 565.1ms | ActiveRecord: 31.8ms | Allocations: 8130250)
+
+
+Started GET "/items/11" for ::1 at 2020-11-09 10:48:33 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mItem Load (9.6ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_errors.erb (Duration: 11.4ms | Allocations: 12165)
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 11], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:23
+  Rendered items/show.erb within layouts/application (Duration: 231.9ms | Allocations: 2488433)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 44.8ms | Allocations: 450934)
+Completed 200 OK in 527ms (Views: 341.8ms | ActiveRecord: 42.9ms | Allocations: 5521596)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 10:48:56 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"vLvBCbRS+Hai725O2D3JHWrhrGq0aoUBBsqsDEWtj0Mi9XeX7kRbB+J2nsl5L6dkeDxOik+6aSLVzaQeUPAXgQ==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"11"}, "commit"=>"Create Bid"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:17:in `create'
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:17:in `create'
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:17:in `create'
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:17:in `create'
+Redirected to http://localhost:3000/items/11
+Completed 302 Found in 188ms (ActiveRecord: 4.5ms | Allocations: 2055274)
+
+
+Started GET "/items/11" for ::1 at 2020-11-09 10:48:56 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_errors.erb (Duration: 8.2ms | Allocations: 136036)
+  Rendered items/show.erb within layouts/application (Duration: 174474.4ms | Allocations: 869374)
+Completed 500 Internal Server Error in 174586ms (ActiveRecord: 2.1ms | Allocations: 2104869)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1
+app/views/items/show.erb:13
+Started GET "/items/11" for ::1 at 2020-11-09 10:52:03 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"11"}
+Completed 500 Internal Server Error in 65754ms (ActiveRecord: 0.0ms | Allocations: 183371)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/items_controller.rb:15:in `show'
+Started GET "/items/11" for ::1 at 2020-11-09 10:53:11 -0500
+Started GET "/items/11" for ::1 at 2020-11-09 10:53:12 -0500
+Started GET "/items/11" for ::1 at 2020-11-09 10:53:12 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"11"}
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"11"}
+Completed 500 Internal Server Error in 7304ms (ActiveRecord: 0.0ms | Allocations: 1238909)
+
+
+  Parameters: {"id"=>"11"}
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/items_controller.rb:15:in `show'
+Completed 500 Internal Server Error in 2222ms (ActiveRecord: 0.0ms | Allocations: 3826028)
+
+
+Completed 500 Internal Server Error in 3270ms (ActiveRecord: 0.0ms | Allocations: 2424934)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/items_controller.rb:15:in `show'
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/items_controller.rb:15:in `show'
+Started GET "/items/11" for ::1 at 2020-11-09 10:53:35 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"11"}
+Completed 500 Internal Server Error in 18981ms (ActiveRecord: 0.0ms | Allocations: 152434)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/items_controller.rb:15:in `show'
+Started GET "/items/" for ::1 at 2020-11-09 10:54:09 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (3.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 346.4ms | Allocations: 3885017)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (9.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 200.2ms | Allocations: 2113269)
+Completed 200 OK in 883ms (Views: 620.8ms | ActiveRecord: 25.5ms | Allocations: 9812675)
+
+
+Started GET "/items/16" for ::1 at 2020-11-09 10:54:12 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+Completed 500 Internal Server Error in 10143ms (ActiveRecord: 0.0ms | Allocations: 293653)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/items_controller.rb:15:in `show'
+Started GET "/items/16" for ::1 at 2020-11-09 10:54:30 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mItem Load (9.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:15:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_errors.erb (Duration: 4.6ms | Allocations: 40493)
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 16], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:22
+  Rendered items/show.erb within layouts/application (Duration: 401.7ms | Allocations: 4218294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 42.7ms | Allocations: 450944)
+Completed 200 OK in 927ms (Views: 520.3ms | ActiveRecord: 62.2ms | Allocations: 9673834)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 10:54:44 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"BxmRfccda/WPpqU4LmS/fDbT0Nj3MzgucV0gvc2Vkq3wBpUUuMjUntZpTxYKHPlmEMxjTzuH6tU1dOSMPynEBQ==", "bid"=>{"bid_amount"=>"-1", "user_id"=>"2", "item_id"=>"16"}, "commit"=>"Create Bid"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:17:in `create'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:17:in `create'
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:17:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:17:in `create'
+Redirected to http://localhost:3000/items/16
+Completed 302 Found in 667ms (ActiveRecord: 38.3ms | Allocations: 6926191)
+
+
+Started GET "/items/16" for ::1 at 2020-11-09 10:54:46 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+Completed 500 Internal Server Error in 397074ms (ActiveRecord: 0.0ms | Allocations: 179861)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/items_controller.rb:15:in `show'
+Started GET "/items/16" for ::1 at 2020-11-09 11:01:37 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 16], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:15
+  Rendered items/show.erb within layouts/application (Duration: 365.4ms | Allocations: 3614991)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 49.8ms | Allocations: 488580)
+Completed 200 OK in 938ms (Views: 503.7ms | ActiveRecord: 46.7ms | Allocations: 9264020)
+
+
+Started GET "/bids/new.16" for ::1 at 2020-11-09 11:01:45 -0500
+Processing by BidsController#new as 
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 4.4ms | Allocations: 40493)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 119.8ms | Allocations: 1189650)
+Completed 500 Internal Server Error in 163ms (ActiveRecord: 1.1ms | Allocations: 1645310)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    4:     <%= f.label :bid_amount,"Place Bid:" %>
+    5:     <%= f.number_field :bid_amount %>
+    6:     <%= f.hidden_field :user_id, value: current_user.id %>
+    7:     <%= f.hidden_field :item_id, value: @item.id %>
+    8:     <%= f.submit %>
+    9: <% end %>
+  
+app/views/bids/new.html.erb:7
+app/views/bids/new.html.erb:3
+Started GET "/bids" for ::1 at 2020-11-09 11:04:07 -0500
+Processing by BidsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering bids/index.html.erb within layouts/application
+  [1m[36mBid Load (1.4ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/bids/index.html.erb:3
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/bids/index.html.erb:4
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/bids/index.html.erb:4
+  Rendered bids/index.html.erb within layouts/application (Duration: 67.2ms | Allocations: 689210)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 45.2ms | Allocations: 488579)
+Completed 200 OK in 264ms (Views: 216.8ms | ActiveRecord: 5.2ms | Allocations: 2719629)
+
+
+Started GET "/items" for ::1 at 2020-11-09 11:04:10 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (3.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 222.0ms | Allocations: 2520227)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 43.8ms | Allocations: 473085)
+Completed 200 OK in 373ms (Views: 346.4ms | ActiveRecord: 4.6ms | Allocations: 4222761)
+
+
+Started GET "/items/9" for ::1 at 2020-11-09 11:04:11 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (9.8ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 9], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:15
+  Rendered items/show.erb within layouts/application (Duration: 66.4ms | Allocations: 708165)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 41.9ms | Allocations: 450945)
+Completed 200 OK in 230ms (Views: 177.3ms | ActiveRecord: 12.9ms | Allocations: 2492877)
+
+
+Started GET "/bids/new.9" for ::1 at 2020-11-09 11:04:13 -0500
+Processing by BidsController#new as 
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 3.0ms | Allocations: 40494)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 105.5ms | Allocations: 1131269)
+Completed 500 Internal Server Error in 134ms (ActiveRecord: 1.1ms | Allocations: 1496041)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    4:     <%= f.label :bid_amount,"Place Bid:" %>
+    5:     <%= f.number_field :bid_amount %>
+    6:     <%= f.hidden_field :user_id, value: current_user.id %>
+    7:     <%= f.hidden_field :item_id, value: @item.id %>
+    8:     <%= f.submit %>
+    9: <% end %>
+  
+app/views/bids/new.html.erb:7
+app/views/bids/new.html.erb:3
+Started GET "/bids/new.9" for ::1 at 2020-11-09 11:05:31 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BidsController#show as 
+  Parameters: {"id"=>"new"}
+  [1m[36mBid Load (1.3ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:7:in `show'
+Completed 404 Not Found in 104ms (ActiveRecord: 7.9ms | Allocations: 1117361)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bid with 'id'=new):
+  
+app/controllers/bids_controller.rb:7:in `show'
+Started GET "/bids/new.9" for ::1 at 2020-11-09 11:06:14 -0500
+Processing by BidsController#show as 
+  Parameters: {"id"=>"new"}
+  [1m[36mBid Load (1.1ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:7:in `show'
+Completed 404 Not Found in 36ms (ActiveRecord: 1.1ms | Allocations: 339832)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bid with 'id'=new):
+  
+app/controllers/bids_controller.rb:7:in `show'
+Started GET "/bids/new.9" for ::1 at 2020-11-09 11:07:02 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BidsController#show as 
+  Parameters: {"id"=>"new"}
+  [1m[36mBid Load (1.5ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:7:in `show'
+Completed 404 Not Found in 95ms (ActiveRecord: 15.6ms | Allocations: 1117359)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bid with 'id'=new):
+  
+app/controllers/bids_controller.rb:7:in `show'
+Started GET "/bids/new.9" for ::1 at 2020-11-09 11:07:10 -0500
+Processing by BidsController#show as 
+  Parameters: {"id"=>"new"}
+  [1m[36mBid Load (1.1ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:7:in `show'
+Completed 404 Not Found in 28ms (ActiveRecord: 1.1ms | Allocations: 339830)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Bid with 'id'=new):
+  
+app/controllers/bids_controller.rb:7:in `show'
+Started GET "/bids/" for ::1 at 2020-11-09 11:07:16 -0500
+Processing by BidsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering bids/index.html.erb within layouts/application
+  [1m[36mBid Load (1.4ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/bids/index.html.erb:3
+  [1m[36mItem Load (9.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/bids/index.html.erb:4
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/bids/index.html.erb:4
+  Rendered bids/index.html.erb within layouts/application (Duration: 341.4ms | Allocations: 3605183)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 38.4ms | Allocations: 450947)
+Completed 200 OK in 676ms (Views: 474.3ms | ActiveRecord: 33.1ms | Allocations: 7016181)
+
+
+Started GET "/items" for ::1 at 2020-11-09 11:07:21 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (3.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 233.7ms | Allocations: 2473592)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (8.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 44.1ms | Allocations: 473085)
+Completed 200 OK in 380ms (Views: 347.5ms | ActiveRecord: 13.0ms | Allocations: 4098757)
+
+
+Started GET "/items/11" for ::1 at 2020-11-09 11:07:22 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 11], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:15
+  Rendered items/show.erb within layouts/application (Duration: 189.2ms | Allocations: 1967071)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 42.7ms | Allocations: 450937)
+Completed 200 OK in 360ms (Views: 300.0ms | ActiveRecord: 20.5ms | Allocations: 3722143)
+
+
+Started GET "/bids/new/11" for ::1 at 2020-11-09 11:07:24 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"id"=>"11"}
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.9ms | Allocations: 12165)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 103.5ms | Allocations: 1115638)
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 1.1ms | Allocations: 1452026)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    4:     <%= f.label :bid_amount,"Place Bid:" %>
+    5:     <%= f.number_field :bid_amount %>
+    6:     <%= f.hidden_field :user_id, value: current_user.id %>
+    7:     <%= f.hidden_field :item_id, value: @item.id %>
+    8:     <%= f.submit %>
+    9: <% end %>
+  
+app/views/bids/new.html.erb:7
+app/views/bids/new.html.erb:3
+Started GET "/bids/new/11" for ::1 at 2020-11-09 11:08:13 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BidsController#new as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:13:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.7ms | Allocations: 12165)
+  [1m[36mUser Load (9.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 218.4ms | Allocations: 2187635)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 42.0ms | Allocations: 450944)
+Completed 200 OK in 743ms (Views: 336.6ms | ActiveRecord: 44.5ms | Allocations: 7604119)
+
+
+Started GET "/bids/new/11" for ::1 at 2020-11-09 11:09:12 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:13:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered items/_item_form.erb (Duration: 96.8ms | Allocations: 966717)
+  Rendered shared/_errors.erb (Duration: 4.3ms | Allocations: 40493)
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 163.2ms | Allocations: 1622761)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 46.3ms | Allocations: 488578)
+Completed 200 OK in 367ms (Views: 315.5ms | ActiveRecord: 3.8ms | Allocations: 3642591)
+
+
+Started GET "/bids/new/11" for ::1 at 2020-11-09 11:12:18 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:13:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 3.3ms | Allocations: 40493)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 65.6ms | Allocations: 651440)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 54.0ms | Allocations: 488576)
+Completed 200 OK in 277ms (Views: 233.1ms | ActiveRecord: 3.0ms | Allocations: 2673910)
+
+
+Started GET "/logout" for ::1 at 2020-11-09 11:13:20 -0500
+Processing by LoginController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 22ms (ActiveRecord: 0.0ms | Allocations: 232657)
+
+
+Started GET "/" for ::1 at 2020-11-09 11:13:20 -0500
+Processing by ApplicationController#home as HTML
+  Rendering application/home.erb within layouts/application
+  Rendered application/home.erb within layouts/application (Duration: 2.9ms | Allocations: 35282)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.erb (Duration: 6.8ms | Allocations: 109960)
+Completed 200 OK in 145ms (Views: 115.3ms | ActiveRecord: 0.0ms | Allocations: 1398247)
+
+
+Started GET "/login" for ::1 at 2020-11-09 11:13:23 -0500
+Processing by LoginController#login_form as HTML
+  Rendering login/login_form.erb within layouts/application
+  Rendered login/login_form.erb within layouts/application (Duration: 69.5ms | Allocations: 156372)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.erb (Duration: 3.4ms | Allocations: 61912)
+Completed 200 OK in 209ms (Views: 187.6ms | ActiveRecord: 0.0ms | Allocations: 1440923)
+
+
+Started POST "/login" for ::1 at 2020-11-09 11:13:27 -0500
+Processing by LoginController#login as HTML
+  Parameters: {"authenticity_token"=>"QBzAMZMQywL7nF+18AKBplMDv2OWdCf96rwutsokxG5XbHFd9aQaMvjKYXjzmxyiZLOUBTr0R7t6PA+UeTFdLw==", "username"=>"Klimt", "commit"=>"Login"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 37ms (ActiveRecord: 0.0ms | Allocations: 322256)
+
+
+Started GET "/" for ::1 at 2020-11-09 11:13:27 -0500
+Processing by ApplicationController#home as HTML
+  Rendering application/home.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered application/home.erb within layouts/application (Duration: 39.9ms | Allocations: 354394)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 44.5ms | Allocations: 461361)
+Completed 200 OK in 185ms (Views: 162.5ms | ActiveRecord: 2.2ms | Allocations: 1897824)
+
+
+Started GET "/items" for ::1 at 2020-11-09 11:13:45 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (3.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 231.1ms | Allocations: 2520228)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 44.8ms | Allocations: 475673)
+Completed 200 OK in 386ms (Views: 366.4ms | ActiveRecord: 4.7ms | Allocations: 4229853)
+
+
+Started GET "/items?list=sale&commit=Display+Items" for ::1 at 2020-11-09 11:13:49 -0500
+Processing by ItemsController#index as HTML
+  Parameters: {"list"=>"sale", "commit"=>"Display Items"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (2.9ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."seller_id" != ?[0m  [["seller_id", 2]]
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 212.8ms | Allocations: 2292882)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 45.3ms | Allocations: 450937)
+Completed 200 OK in 375ms (Views: 338.1ms | ActiveRecord: 4.8ms | Allocations: 4061867)
+
+
+Started GET "/items?list=selling&commit=Display+Items" for ::1 at 2020-11-09 11:13:52 -0500
+Processing by ItemsController#index as HTML
+  Parameters: {"list"=>"selling", "commit"=>"Display Items"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (11.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."seller_id" = ?[0m  [["seller_id", 2]]
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 49.2ms | Allocations: 542513)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 43.8ms | Allocations: 450937)
+Completed 200 OK in 219ms (Views: 173.1ms | ActiveRecord: 13.0ms | Allocations: 2308512)
+
+
+Started GET "/items/60" for ::1 at 2020-11-09 11:13:57 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 60], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:15
+  Rendered items/show.erb within layouts/application (Duration: 317.9ms | Allocations: 3492554)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 43.9ms | Allocations: 461361)
+Completed 200 OK in 486ms (Views: 434.3ms | ActiveRecord: 11.9ms | Allocations: 5287684)
+
+
+Started GET "/items?list=selling&commit=Display+Items" for ::1 at 2020-11-09 11:15:12 -0500
+Processing by ItemsController#index as HTML
+  Parameters: {"list"=>"selling", "commit"=>"Display Items"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."seller_id" = ?[0m  [["seller_id", 2]]
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 60.8ms | Allocations: 583564)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 48.5ms | Allocations: 488577)
+Completed 200 OK in 251ms (Views: 213.2ms | ActiveRecord: 3.3ms | Allocations: 2611791)
+
+
+Started GET "/items" for ::1 at 2020-11-09 11:15:22 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (2.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 224.3ms | Allocations: 2467994)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (10.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 44.8ms | Allocations: 475666)
+Completed 200 OK in 377ms (Views: 335.1ms | ActiveRecord: 14.3ms | Allocations: 4057100)
+
+
+Started GET "/items/13" for ::1 at 2020-11-09 11:15:24 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 13], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:15
+  Rendered items/show.erb within layouts/application (Duration: 58.4ms | Allocations: 693326)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 39.2ms | Allocations: 450944)
+Completed 200 OK in 236ms (Views: 198.1ms | ActiveRecord: 4.4ms | Allocations: 2478040)
+
+
+Started GET "/bids/new/13" for ::1 at 2020-11-09 11:15:27 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:13:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 2.9ms | Allocations: 43136)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 69.0ms | Allocations: 673610)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 43.6ms | Allocations: 450940)
+Completed 200 OK in 243ms (Views: 200.1ms | ActiveRecord: 3.0ms | Allocations: 2551362)
+
+
+Started GET "/bids/new/13" for ::1 at 2020-11-09 11:16:34 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:13:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 11.2ms | Allocations: 40493)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 67.7ms | Allocations: 670973)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 47.3ms | Allocations: 488576)
+Completed 200 OK in 261ms (Views: 217.0ms | ActiveRecord: 2.9ms | Allocations: 2691629)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:16:42 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"oHKlLxFibO58gW7IOfMYU5VjD9fqB/Gwl04p31E3VqFXbaFGbrfThSVOhOYdi15Js3y8QCazI0vTZ+3uo4sACQ==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"13"}, "commit"=>"Create Bid"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:18:in `create'
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:18:in `create'
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:18:in `create'
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:18:in `create'
+Redirected to 
+Completed 500 Internal Server Error in 1687ms (ActiveRecord: 4.2ms | Allocations: 17215951)
+
+
+  
+NoMethodError (undefined method `new_url' for #<BidsController:0x00007f9b3e58d7a8>
+Did you mean?  new_bid_url):
+  
+app/controllers/bids_controller.rb:21:in `create'
+Started POST "/bids" for ::1 at 2020-11-09 11:17:33 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"oHKlLxFibO58gW7IOfMYU5VjD9fqB/Gwl04p31E3VqFXbaFGbrfThSVOhOYdi15Js3y8QCazI0vTZ+3uo4sACQ==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"13"}, "commit"=>"Create Bid"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:18:in `create'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:18:in `create'
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:18:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:18:in `create'
+Redirected to 
+Completed 500 Internal Server Error in 1646ms (ActiveRecord: 3.4ms | Allocations: 16837248)
+
+
+  
+NoMethodError (undefined method `new_url' for #<BidsController:0x00007f9b47a655b0>
+Did you mean?  new_bid_url):
+  
+app/controllers/bids_controller.rb:21:in `create'
+Started POST "/bids" for ::1 at 2020-11-09 11:19:50 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"oHKlLxFibO58gW7IOfMYU5VjD9fqB/Gwl04p31E3VqFXbaFGbrfThSVOhOYdi15Js3y8QCazI0vTZ+3uo4sACQ==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"13"}, "commit"=>"Create Bid"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:18:in `create'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:18:in `create'
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:18:in `create'
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:18:in `create'
+Redirected to http://localhost:3000bids/new/
+Completed 302 Found in 656ms (ActiveRecord: 31.8ms | Allocations: 6881303)
+
+
+Started GET "/" for ::1 at 2020-11-09 11:20:01 -0500
+Processing by ApplicationController#home as HTML
+  Rendering application/home.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered application/home.erb within layouts/application (Duration: 48.5ms | Allocations: 468296)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (8.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 45.3ms | Allocations: 461362)
+Completed 200 OK in 211ms (Views: 170.2ms | ActiveRecord: 11.2ms | Allocations: 2077940)
+
+
+Started GET "/items" for ::1 at 2020-11-09 11:20:04 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (4.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 242.6ms | Allocations: 2520367)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 40.7ms | Allocations: 473087)
+Completed 200 OK in 410ms (Views: 382.1ms | ActiveRecord: 5.5ms | Allocations: 4227279)
+
+
+Started GET "/items/9" for ::1 at 2020-11-09 11:20:06 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 9], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:15
+  Rendered items/show.erb within layouts/application (Duration: 185.0ms | Allocations: 2017243)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 44.4ms | Allocations: 450942)
+Completed 200 OK in 367ms (Views: 299.2ms | ActiveRecord: 21.0ms | Allocations: 3887794)
+
+
+Started GET "/bids/new/9" for ::1 at 2020-11-09 11:20:07 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:13:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.7ms | Allocations: 12165)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 63.5ms | Allocations: 622263)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 44.3ms | Allocations: 450942)
+Completed 200 OK in 234ms (Views: 200.5ms | ActiveRecord: 3.5ms | Allocations: 2420228)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:20:11 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"B18hUJnuxIIlHBd18AqJzeyOGP0DSHatRuQ7ZfxyE9yZEZfOw/hn82WF5/JRGOe0/lP6HfiYmo6V4zN36S+LHg==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"9"}, "commit"=>"Create Bid"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:18:in `create'
+  [1m[36mUser Load (10.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:18:in `create'
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:18:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:18:in `create'
+Redirected to http://localhost:3000bids/new/
+Completed 302 Found in 148ms (ActiveRecord: 12.4ms | Allocations: 1494996)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:20:34 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"6gbEX780H745/2Re+7/KbleoLUBXZx137Md4/htPqRodGcA2wOGg1WAwjnDfx4x0cbee15vTz4yo7rzP6fP/sg==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"9"}, "commit"=>"Create Bid"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:18:in `create'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:18:in `create'
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:18:in `create'
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:18:in `create'
+Redirected to http://localhost:3000bids/new/
+Completed 302 Found in 647ms (ActiveRecord: 29.4ms | Allocations: 6878365)
+
+
+Started GET "/bids/new/9" for ::1 at 2020-11-09 11:21:48 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BidsController#new as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mItem Load (10.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:15:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.7ms | Allocations: 12165)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 217.0ms | Allocations: 2228306)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 44.8ms | Allocations: 450944)
+Completed 200 OK in 753ms (Views: 351.0ms | ActiveRecord: 54.4ms | Allocations: 7655332)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:22:09 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"AB/vEL5IeyaYnCVNnwABWxgfrsN04W45wFirZRPuC9X3AOt5wZ3ETcFTz2O7eEdBPgAdVLhVvMKEcW9U4VJdfQ==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"9"}, "commit"=>"Create Bid"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:20:in `create'
+  [1m[36mUser Load (10.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:20:in `create'
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:20:in `create'
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:20:in `create'
+Redirected to http://localhost:3000bids/new/
+Completed 302 Found in 186ms (ActiveRecord: 12.8ms | Allocations: 1809552)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:26:58 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"AB/vEL5IeyaYnCVNnwABWxgfrsN04W45wFirZRPuC9X3AOt5wZ3ETcFTz2O7eEdBPgAdVLhVvMKEcW9U4VJdfQ==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"9"}, "commit"=>"Create Bid"}
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:20:in `create'
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:20:in `create'
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:20:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:20:in `create'
+Redirected to http://localhost:3000bids/new/
+Completed 302 Found in 153ms (ActiveRecord: 4.1ms | Allocations: 1462866)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:29:14 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"AB/vEL5IeyaYnCVNnwABWxgfrsN04W45wFirZRPuC9X3AOt5wZ3ETcFTz2O7eEdBPgAdVLhVvMKEcW9U4VJdfQ==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"9"}, "commit"=>"Create Bid"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[35m (1.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+Redirected to http://localhost:3000bids/new/
+Completed 302 Found in 684ms (ActiveRecord: 22.6ms | Allocations: 6881000)
+
+
+Started GET "/" for ::1 at 2020-11-09 11:29:23 -0500
+Processing by ApplicationController#home as HTML
+  Rendering application/home.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered application/home.erb within layouts/application (Duration: 47.7ms | Allocations: 468298)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 58.2ms | Allocations: 501583)
+Completed 200 OK in 240ms (Views: 214.3ms | ActiveRecord: 2.8ms | Allocations: 2216611)
+
+
+Started GET "/items" for ::1 at 2020-11-09 11:29:25 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (4.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 251.9ms | Allocations: 2522820)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 63.3ms | Allocations: 473087)
+Completed 200 OK in 444ms (Views: 404.7ms | ActiveRecord: 6.2ms | Allocations: 4234227)
+
+
+Started GET "/items/8" for ::1 at 2020-11-09 11:29:26 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 8], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:15
+  Rendered items/show.erb within layouts/application (Duration: 214.4ms | Allocations: 2031914)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 44.1ms | Allocations: 450945)
+Completed 200 OK in 414ms (Views: 333.0ms | ActiveRecord: 21.4ms | Allocations: 3901170)
+
+
+Started GET "/bids/new?item_id=8" for ::1 at 2020-11-09 11:29:28 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"item_id"=>"8"}
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:14:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 12.2ms | Allocations: 40493)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 73.5ms | Allocations: 726215)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 54.1ms | Allocations: 450940)
+Completed 200 OK in 292ms (Views: 245.1ms | ActiveRecord: 3.1ms | Allocations: 2606444)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:29:31 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"BwYnZezvqwSBkVXRV/z/Ayp59Nz3pvPpZrPUn69YGfaZSJH7tvkIdcEIpVb27pF6OKQWPAx2H8q1tNyNugWBNA==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"8"}, "commit"=>"Create Bid"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+Redirected to http://localhost:3000bids/new/
+Completed 302 Found in 153ms (ActiveRecord: 3.4ms | Allocations: 1495883)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:32:07 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"BwYnZezvqwSBkVXRV/z/Ayp59Nz3pvPpZrPUn69YGfaZSJH7tvkIdcEIpVb27pF6OKQWPAx2H8q1tNyNugWBNA==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"8"}, "commit"=>"Create Bid"}
+  [1m[35m (1.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mUser Load (9.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+Redirected to http://localhost:3000bids/new/
+Completed 302 Found in 717ms (ActiveRecord: 47.6ms | Allocations: 6916667)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:32:39 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"BwYnZezvqwSBkVXRV/z/Ayp59Nz3pvPpZrPUn69YGfaZSJH7tvkIdcEIpVb27pF6OKQWPAx2H8q1tNyNugWBNA==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"8"}, "commit"=>"Create Bid"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[35m (1.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+Redirected to http://localhost:3000/items/8
+Completed 302 Found in 753ms (ActiveRecord: 48.3ms | Allocations: 6941817)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:32:51 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"3YiPpyv0g5/GMNPLRyu/dvU2vMH7orKRIN6FPc2F91kql4vOVCE89J//OeVjU/ls0ykPVjcWYGpk90EMPzmh8Q==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"8"}, "commit"=>"Create Bid"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+Redirected to http://localhost:3000/items/8
+Completed 302 Found in 164ms (ActiveRecord: 3.6ms | Allocations: 1485169)
+
+
+Started GET "/items/8" for ::1 at 2020-11-09 11:32:52 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 8], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:15
+  Rendered items/show.erb within layouts/application (Duration: 220.0ms | Allocations: 2074057)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 49.1ms | Allocations: 450947)
+Completed 200 OK in 438ms (Views: 360.5ms | ActiveRecord: 22.3ms | Allocations: 3955720)
+
+
+Started GET "/items/8" for ::1 at 2020-11-09 11:33:40 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 8], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:15
+  Rendered items/show.erb within layouts/application (Duration: 383.4ms | Allocations: 3584674)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 52.0ms | Allocations: 453535)
+Completed 200 OK in 982ms (Views: 520.9ms | ActiveRecord: 56.3ms | Allocations: 9012266)
+
+
+Started GET "/bids/new?item_id=8" for ::1 at 2020-11-09 11:33:46 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"item_id"=>"8"}
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:14:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.7ms | Allocations: 12165)
+  [1m[36mUser Load (9.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 64.2ms | Allocations: 625390)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 51.2ms | Allocations: 450942)
+Completed 200 OK in 269ms (Views: 217.5ms | ActiveRecord: 11.1ms | Allocations: 2422870)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:33:49 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"YqG3lAIbK8B0PGww3HBOSPiS6VL1E9UjLS5FTTyl1+j87wEKWA2IsTSlnLd9YiAx6k8Lsg7DOQD+KU1fKfhPKg==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"8"}, "commit"=>"Create Bid"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered bids/new.html.erb within layouts/application (Duration: 101.7ms | Allocations: 1044100)
+Completed 500 Internal Server Error in 321ms (ActiveRecord: 5.0ms | Allocations: 2963167)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1>Bids</h1>
+    2: <h2>Name: <%= link_to @item.name, item_path(@item) %></h2>
+    3: <h3>Description: <%= @item.description %></h3>
+    4: <h3>Asking Price: <%= @item.asking_price %></h3>
+    5: <h3>End Date: <%= @item.end_date %></h3>
+  
+app/views/bids/new.html.erb:2
+app/controllers/bids_controller.rb:22:in `create'
+Started GET "/bids/new?item_id=8" for ::1 at 2020-11-09 11:34:22 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BidsController#new as HTML
+  Parameters: {"item_id"=>"8"}
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:14:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.7ms | Allocations: 12165)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 258.7ms | Allocations: 2228319)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 49.7ms | Allocations: 450944)
+Completed 200 OK in 896ms (Views: 424.0ms | ActiveRecord: 30.9ms | Allocations: 7658852)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:34:28 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"kRmsVko1Yk3WjShUqfg7iY8K+ScGq4RPgu+QjLf0/oRmBqg/NeDdJo9CwnqNgH2TqRVKsMofVrTGxlS9RUioLA==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"8"}, "commit"=>"Create Bid"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered bids/new.html.erb within layouts/application (Duration: 117.4ms | Allocations: 1044099)
+Completed 500 Internal Server Error in 346ms (ActiveRecord: 4.2ms | Allocations: 2928388)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1>Bids</h1>
+    2: <h2>Name: <%= link_to @item.name, item_path(@item) %></h2>
+    3: <h3>Description: <%= @item.description %></h3>
+    4: <h3>Asking Price: <%= @item.asking_price %></h3>
+    5: <h3>End Date: <%= @item.end_date %></h3>
+  
+app/views/bids/new.html.erb:2
+app/controllers/bids_controller.rb:22:in `create'
+Started POST "/bids" for ::1 at 2020-11-09 11:35:53 -0500
+  [1m[35m (9.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"kRmsVko1Yk3WjShUqfg7iY8K+ScGq4RPgu+QjLf0/oRmBqg/NeDdJo9CwnqNgH2TqRVKsMofVrTGxlS9RUioLA==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"8"}, "commit"=>"Create Bid"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+Redirected to http://localhost:3000/bids/new?item_id=8
+Completed 302 Found in 810ms (ActiveRecord: 29.8ms | Allocations: 6921713)
+
+
+Started GET "/bids/new?item_id=8" for ::1 at 2020-11-09 11:35:56 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"item_id"=>"8"}
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:14:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.8ms | Allocations: 12165)
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 72.6ms | Allocations: 711983)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 37.5ms | Allocations: 450944)
+Completed 200 OK in 259ms (Views: 209.8ms | ActiveRecord: 3.6ms | Allocations: 2593594)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:36:03 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"IDaYxl6U9Uh/AqqjHzeBNYktZtAyRIKZDmWDfgp/XCHXKZyvIUFKIybNQI07T8cvrzLVR/7wUGJKTEdP+MMKiQ==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"8"}, "commit"=>"Create Bid"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+Redirected to http://localhost:3000/bids/new?item_id=8
+Completed 302 Found in 148ms (ActiveRecord: 3.5ms | Allocations: 1504401)
+
+
+Started GET "/bids/new?item_id=8" for ::1 at 2020-11-09 11:36:03 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"item_id"=>"8"}
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:14:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.7ms | Allocations: 12165)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 63.1ms | Allocations: 567005)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 47.4ms | Allocations: 450936)
+Completed 200 OK in 240ms (Views: 194.8ms | ActiveRecord: 3.3ms | Allocations: 2325800)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:37:57 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"RmSL1JILkSMZA2CboxfXauJI1dyDtetW19i2x6E7mZyxe4+97d4uSEDMirWHb5FwxFdmS08BOa2T8XL2U4fPNA==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"8"}, "commit"=>"Create Bid"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+Redirected to http://localhost:3000/bids/new?item_id=8
+Completed 302 Found in 141ms (ActiveRecord: 3.6ms | Allocations: 1501766)
+
+
+Started GET "/bids/new?item_id=8" for ::1 at 2020-11-09 11:37:57 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"item_id"=>"8"}
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:14:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered bids/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 60644)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 1.4ms | Allocations: 725627)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Bids</h1>
+<%= partial: '/shared/errors'%>
+<h2>Name: <%= link_to @item.name, item_path(@item) %></h2>
+<h3>Description: <%= @item.description %></h3>
+<h3>Asking Price: <%= @item.asking_price %></h3>
+<h3>End Date: <%= @item.end_date %></h3>
+<%= render partial: 'shared/errors', locals: {object: @bid} %>
+<%= form_for @bid, method: :post do |f| %>
+    <%= f.label :bid_amount,"Place Bid:" %>
+    <%= f.number_field :bid_amount %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.hidden_field :item_id, value: @item.id %>
+    <%= f.submit %>
+<% end %>
+):
+1:    <h1>Bids</h1>
+2:    <%= partial: '/shared/errors'%>
+3:    <h2>Name: <%= link_to @item.name, item_path(@item) %></h2>
+4:    <h3>Description: <%= @item.description %></h3>
+5:    <h3>Asking Price: <%= @item.asking_price %></h3>
+6:    <h3>End Date: <%= @item.end_date %></h3>
+7:    <%= render partial: 'shared/errors', locals: {object: @bid} %>
+8:    <%= form_for @bid, method: :post do |f| %>
+9:        <%= f.label :bid_amount,"Place Bid:" %>
+10:        <%= f.number_field :bid_amount %>
+11:        <%= f.hidden_field :user_id, value: current_user.id %>
+12:        <%= f.hidden_field :item_id, value: @item.id %>
+13:        <%= f.submit %>
+14:    <% end %>
+  
+app/views/bids/new.html.erb:2: syntax error, unexpected tLABEL
+app/views/bids/new.html.erb:2: syntax error, unexpected tLABEL
+app/views/bids/new.html.erb:2: syntax error, unexpected tLABEL
+app/views/bids/new.html.erb:2: syntax error, unexpected tLABEL
+app/views/bids/new.html.erb:2: syntax error, unexpected tLABEL
+app/views/bids/new.html.erb:2: syntax error, unexpected tLABEL
+Started GET "/items/8" for ::1 at 2020-11-09 11:38:28 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (9.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 8], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:15
+  Rendered items/show.erb within layouts/application (Duration: 200.1ms | Allocations: 2034557)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 47.2ms | Allocations: 488579)
+Completed 200 OK in 403ms (Views: 331.8ms | ActiveRecord: 28.6ms | Allocations: 4053063)
+
+
+Started GET "/bids/new?item_id=8" for ::1 at 2020-11-09 11:38:29 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"item_id"=>"8"}
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:14:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 2378.6ms | Allocations: 24485100)
+  Rendered bids/new.html.erb within layouts/application (Duration: 2387.5ms | Allocations: 24610280)
+Completed 500 Internal Server Error in 2452ms (ActiveRecord: 1.1ms | Allocations: 25232290)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `object' for #<#<Class:0x00007f9b3b689da8>:0x00007f9b3f71c640>
+Did you mean?  object_id):
+    1: <% if object.errors.any? %>
+    2:     <ul>
+    3:         <% object.errors.full_messages.each do |message| %>
+    4:             <li><%= message %></li>
+  
+app/views/shared/_errors.erb:1
+app/views/bids/new.html.erb:2
+Started GET "/bids/new?item_id=8" for ::1 at 2020-11-09 11:38:42 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BidsController#new as HTML
+  Parameters: {"item_id"=>"8"}
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:14:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 2306.8ms | Allocations: 24236449)
+  Rendered bids/new.html.erb within layouts/application (Duration: 2310.1ms | Allocations: 24283649)
+Completed 500 Internal Server Error in 2361ms (ActiveRecord: 1.4ms | Allocations: 24816508)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `object' for #<#<Class:0x00007f9b3b689da8>:0x00007f9b3b6db5b8>
+Did you mean?  object_id):
+    1: <% if object.errors.any? %>
+    2:     <ul>
+    3:         <% object.errors.full_messages.each do |message| %>
+    4:             <li><%= message %></li>
+  
+app/views/shared/_errors.erb:1
+app/views/bids/new.html.erb:2
+Started GET "/bids/new?item_id=8" for ::1 at 2020-11-09 11:39:17 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"item_id"=>"8"}
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:14:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 2.8ms | Allocations: 40494)
+  Rendered shared/_errors.erb (Duration: 0.7ms | Allocations: 10904)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 71.8ms | Allocations: 726645)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 47.2ms | Allocations: 488576)
+Completed 200 OK in 278ms (Views: 232.3ms | ActiveRecord: 3.5ms | Allocations: 2746466)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:39:20 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"VwHuMU6YX1Up5HqjsgIEH1mdaFC0FW+GFzEhPHpzmNGgHupYMU3gPnArkI2WekIFf4Lbx3ihvX1TGOUNiM/OeQ==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"8"}, "commit"=>"Create Bid"}
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mUser Load (10.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+Redirected to http://localhost:3000/bids/new?item_id=8
+Completed 302 Found in 148ms (ActiveRecord: 13.4ms | Allocations: 1505064)
+
+
+Started GET "/bids/new?item_id=8" for ::1 at 2020-11-09 11:39:20 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"item_id"=>"8"}
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:14:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 1.1ms | Allocations: 12165)
+  Rendered shared/_errors.erb (Duration: 0.6ms | Allocations: 10904)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 62.2ms | Allocations: 615864)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 43.2ms | Allocations: 450936)
+Completed 200 OK in 235ms (Views: 192.8ms | ActiveRecord: 3.0ms | Allocations: 2374658)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:40:49 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"BNld/qMxouV/WtRy2HVLtxU2nitWyAvzll+KfF3D1vnzxlmX3OQdjiaVPlz8DQ2tMyktvJp82QjSdk5Nr3+AUQ==", "bid"=>{"bid_amount"=>"4", "user_id"=>"2", "item_id"=>"8"}, "commit"=>"Create Bid"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mBid Create (1.7ms)[0m  [1m[32mINSERT INTO "bids" ("user_id", "item_id", "bid_amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 2], ["item_id", 8], ["bid_amount", 4.0], ["created_at", "2020-11-09 16:40:49.247688"], ["updated_at", "2020-11-09 16:40:49.247688"]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+Redirected to http://localhost:3000/bids/4
+Completed 302 Found in 179ms (ActiveRecord: 6.2ms | Allocations: 1872773)
+
+
+Started GET "/bids/4" for ::1 at 2020-11-09 11:40:49 -0500
+Processing by BidsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBid Load (1.6ms)[0m  [1m[34mSELECT "bids".* FROM "bids" WHERE "bids"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:7:in `show'
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:8:in `show'
+  Rendering bids/show.html.erb within layouts/application
+  Rendered bids/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 40779)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 56.9ms | Allocations: 521227)
+Completed 200 OK in 305ms (Views: 237.1ms | ActiveRecord: 4.3ms | Allocations: 3098173)
+
+
+Started GET "/items" for ::1 at 2020-11-09 11:40:52 -0500
+Processing by ItemsController#index as HTML
+  Rendering items/index.erb within layouts/application
+  [1m[36mItem Load (3.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.erb:13
+  Rendered items/index.erb within layouts/application (Duration: 226.9ms | Allocations: 2520229)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 38.8ms | Allocations: 473087)
+Completed 200 OK in 391ms (Views: 363.9ms | ActiveRecord: 4.8ms | Allocations: 4227660)
+
+
+Started GET "/items/14" for ::1 at 2020-11-09 11:40:53 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:14:in `show'
+  Rendering items/show.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mTag Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "tags" INNER JOIN "item_tags" ON "tags"."id" = "item_tags"."tag_id" WHERE "item_tags"."item_id" = ? LIMIT ?[0m  [["item_id", 14], ["LIMIT", 1]]
+  ↳ app/views/items/show.erb:15
+  Rendered items/show.erb within layouts/application (Duration: 68.1ms | Allocations: 707467)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 42.4ms | Allocations: 450943)
+Completed 200 OK in 245ms (Views: 200.1ms | ActiveRecord: 4.0ms | Allocations: 2492400)
+
+
+Started GET "/bids/new?item_id=14" for ::1 at 2020-11-09 11:40:54 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"item_id"=>"14"}
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:14:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 2.6ms | Allocations: 40494)
+  Rendered shared/_errors.erb (Duration: 0.6ms | Allocations: 10904)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 79.3ms | Allocations: 722452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 42.7ms | Allocations: 450942)
+Completed 200 OK in 245ms (Views: 200.4ms | ActiveRecord: 2.9ms | Allocations: 2510520)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:40:57 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"aZBnW4RcaxkW8SWRt+BD3fBaFHH/EDRD1UgRdCWP3HT33tHF3krIaFZo1RYW8i2k4of2kQTA2GAGTxlmMNJEtg==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"14"}, "commit"=>"Create Bid"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+Redirected to http://localhost:3000/bids/new?item_id=14
+Completed 302 Found in 149ms (ActiveRecord: 3.6ms | Allocations: 1538232)
+
+
+Started GET "/bids/new?item_id=14" for ::1 at 2020-11-09 11:40:57 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"item_id"=>"14"}
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:14:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.8ms | Allocations: 12165)
+  Rendered shared/_errors.erb (Duration: 0.7ms | Allocations: 10904)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 56.4ms | Allocations: 615859)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 43.5ms | Allocations: 450936)
+Completed 200 OK in 237ms (Views: 195.7ms | ActiveRecord: 3.0ms | Allocations: 2375526)
+
+
+Started GET "/bids/new?item_id=14" for ::1 at 2020-11-09 11:41:17 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"item_id"=>"14"}
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:14:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 3.3ms | Allocations: 40493)
+  Rendered shared/_errors.erb (Duration: 0.6ms | Allocations: 10904)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 73.1ms | Allocations: 723339)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 45.9ms | Allocations: 488576)
+Completed 200 OK in 283ms (Views: 230.4ms | ActiveRecord: 3.1ms | Allocations: 2743997)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:42:06 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"KpAH8z3OzwVOzarZUqWTjgRvPKcQYJ6LBiUD3IZMCU/djwOaQhtwbhcCQPd23dWUInCPMNzUTHBCDMftdPBf5w==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"14"}, "commit"=>"Create Bid"}
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+Redirected to http://localhost:3000/bids/new?item_id=14
+Completed 302 Found in 148ms (ActiveRecord: 4.0ms | Allocations: 1500870)
+
+
+Started GET "/bids/new?item_id=14" for ::1 at 2020-11-09 11:42:07 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"item_id"=>"14"}
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:14:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 2.6ms | Allocations: 40493)
+  Rendered bids/new.html.erb within layouts/application (Duration: 98900.8ms | Allocations: 278220)
+Completed 500 Internal Server Error in 98982ms (ActiveRecord: 1.3ms | Allocations: 1048558)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1
+app/views/bids/new.html.erb:4
+Started GET "/bids/new?item_id=14" for ::1 at 2020-11-09 11:43:46 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"item_id"=>"14"}
+  [1m[36mItem Load (10.7ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:14:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.8ms | Allocations: 11905)
+Started GET "/bids/new?item_id=14" for ::1 at 2020-11-09 11:43:55 -0500
+  Rendered bids/new.html.erb within layouts/application (Duration: 6860.1ms | Allocations: 6772447)
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Completed 500 Internal Server Error in 7810ms (ActiveRecord: 10.7ms | Allocations: 16560731)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1
+app/views/bids/new.html.erb:4
+Processing by BidsController#new as HTML
+  Parameters: {"item_id"=>"14"}
+  [1m[36mItem Load (9.9ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:14:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 310.7ms | Allocations: 3233308)
+  Rendered shared/_errors.erb (Duration: 0.6ms | Allocations: 10205)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 1984.2ms | Allocations: 20778701)
+Started GET "/bids/new?item_id=14" for ::1 at 2020-11-09 11:44:04 -0500
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 66.9ms | Allocations: 541706)
+Completed 200 OK in 18626ms (Views: 17997.4ms | ActiveRecord: 11.8ms | Allocations: 184174767)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BidsController#new as HTML
+  Parameters: {"item_id"=>"14"}
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:14:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.7ms | Allocations: 12165)
+  Rendered shared/_errors.erb (Duration: 0.6ms | Allocations: 10904)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 259.7ms | Allocations: 2279822)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 51.9ms | Allocations: 450944)
+Completed 200 OK in 877ms (Views: 408.3ms | ActiveRecord: 37.3ms | Allocations: 7729819)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:44:24 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"nQJ3r1qVMwlKlPpe/79N24EIjw4OuUz2XoEacP4frSlqHXPGJUCMYhNbEHDbxwvBpxc8mcINng0aqN5BDKP7gQ==", "bid"=>{"bid_amount"=>"", "user_id"=>"2", "item_id"=>"14"}, "commit"=>"Create Bid"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+Redirected to http://localhost:3000/bids/new?item_id=14
+Completed 302 Found in 239ms (ActiveRecord: 4.4ms | Allocations: 2083699)
+
+
+Started GET "/bids/new?item_id=14" for ::1 at 2020-11-09 11:44:25 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"item_id"=>"14"}
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:14:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.8ms | Allocations: 12165)
+  Rendered shared/_errors.erb (Duration: 0.7ms | Allocations: 10904)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 68.9ms | Allocations: 615861)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 51.4ms | Allocations: 450936)
+Completed 200 OK in 281ms (Views: 231.0ms | ActiveRecord: 3.1ms | Allocations: 2383099)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:45:27 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"/ZeBlNOAkyV/DfQHJFbJ8t0esqGWikyvIvKvkWYI0KcKiIX9rFUsTibCHikALo/o+wEBNlo+nlRm22uglLSGDw==", "bid"=>{"bid_amount"=>"", "user_id"=>"2", "item_id"=>"14"}, "commit"=>"Create Bid"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+Redirected to http://localhost:3000/bids/new?item_id=14
+Completed 302 Found in 199ms (ActiveRecord: 3.8ms | Allocations: 1706377)
+
+
+Started GET "/bids/new?item_id=14" for ::1 at 2020-11-09 11:45:28 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"item_id"=>"14"}
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:14:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 2.6ms | Allocations: 40494)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 82.2ms | Allocations: 671480)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 55.5ms | Allocations: 488578)
+Completed 200 OK in 315ms (Views: 262.9ms | ActiveRecord: 3.2ms | Allocations: 2692132)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:45:31 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"+bGcqhgmV+tqV6uID/kKjcDqbO1OmUCRaBKYSY5kNHMOrpjDZ/PogDOYQaYrgUyX5vXfeoItkmosO1x4fNhi2w==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"14"}, "commit"=>"Create Bid"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+Redirected to http://localhost:3000/bids/new?item_id=14
+Completed 302 Found in 178ms (ActiveRecord: 4.0ms | Allocations: 1506390)
+
+
+Started GET "/bids/new?item_id=14" for ::1 at 2020-11-09 11:45:31 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"item_id"=>"14"}
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:14:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.7ms | Allocations: 12165)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 66.8ms | Allocations: 567103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 135.0ms | Allocations: 450938)
+Completed 200 OK in 350ms (Views: 309.4ms | ActiveRecord: 3.2ms | Allocations: 2328371)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:46:31 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"hDiF6jyf7hzNNgrtftDBt/KiwaJ/QUubdYzJ0li5VLBzJ4GDQ0pRd5T54MNaqIet1L1yNbP1mWAxpQ3jqgUCGA==", "bid"=>{"bid_amount"=>"", "user_id"=>"2", "item_id"=>"14"}, "commit"=>"Create Bid"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[35m (1.5ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+Redirected to http://localhost:3000/bids/new?item_id=14
+Completed 302 Found in 182ms (ActiveRecord: 4.7ms | Allocations: 1706370)
+
+
+Started GET "/bids/new?item_id=14" for ::1 at 2020-11-09 11:46:31 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"item_id"=>"14"}
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:14:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 2.8ms | Allocations: 42231)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 67.9ms | Allocations: 673220)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 45.3ms | Allocations: 488578)
+Completed 200 OK in 259ms (Views: 216.2ms | ActiveRecord: 2.9ms | Allocations: 2693870)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:46:36 -0500
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"fzZVvxPYwesEAGG9zQFXWc9tGuHG6zUHZu+5mgpR4qiIKVHWbA1+gF3Pi5PpeRFD6XKpdgpf5/wixn2r+O20AA==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"14"}, "commit"=>"Create Bid"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+Redirected to http://localhost:3000/bids/new?item_id=14
+Completed 302 Found in 111ms (ActiveRecord: 2.7ms | Allocations: 1506388)
+
+
+Started GET "/bids/new?item_id=14" for ::1 at 2020-11-09 11:46:36 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"item_id"=>"14"}
+  [1m[36mItem Load (7.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:14:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 0.6ms | Allocations: 12165)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 40.1ms | Allocations: 567105)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 34.9ms | Allocations: 450936)
+Completed 200 OK in 175ms (Views: 148.8ms | ActiveRecord: 8.9ms | Allocations: 2325905)
+
+
+Started POST "/bids" for ::1 at 2020-11-09 11:48:59 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"QhYj+SPmW7p01sVuNC5W3BVc53oLeKUcb7AIgWegVsu1CSeQXDPk0S0ZL0AQVhDGM0NU7cfMd+crmcywlRwAYw==", "bid"=>{"bid_amount"=>"", "user_id"=>"2", "item_id"=>"14"}, "commit"=>"Create Bid"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mItem Load (1.7ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+Completed 500 Internal Server Error in 694ms (ActiveRecord: 37.7ms | Allocations: 7324023)
+
+
+  
+ActionView::MissingTemplate (Missing template bids/new?item_id=14 with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/jakeshort/Desktop/Flatiron/duckat/app/views"
+  * "/Users/jakeshort/.rvm/gems/ruby-2.6.1/gems/actiontext-6.0.3.4/app/views"
+  * "/Users/jakeshort/.rvm/gems/ruby-2.6.1/gems/actionmailbox-6.0.3.4/app/views"
+):
+  
+app/controllers/bids_controller.rb:22:in `create'
+Started POST "/bids" for ::1 at 2020-11-09 11:50:22 -0500
+  [1m[35m (10.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BidsController#create as HTML
+  Parameters: {"authenticity_token"=>"QhYj+SPmW7p01sVuNC5W3BVc53oLeKUcb7AIgWegVsu1CSeQXDPk0S0ZL0AQVhDGM0NU7cfMd+crmcywlRwAYw==", "bid"=>{"bid_amount"=>"-4", "user_id"=>"2", "item_id"=>"14"}, "commit"=>"Create Bid"}
+  [1m[35m (1.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/bids_controller.rb:19:in `create'
+Redirected to http://localhost:3000/bids/new?item_id=14
+Completed 302 Found in 692ms (ActiveRecord: 41.1ms | Allocations: 6953005)
+
+
+Started GET "/bids/new?item_id=14" for ::1 at 2020-11-09 11:50:25 -0500
+Processing by BidsController#new as HTML
+  Parameters: {"item_id"=>"14"}
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/bids_controller.rb:14:in `new'
+  Rendering bids/new.html.erb within layouts/application
+  Rendered shared/_errors.erb (Duration: 2.6ms | Allocations: 40494)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered bids/new.html.erb within layouts/application (Duration: 84.7ms | Allocations: 816446)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Klimt"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `current_user'
+  Rendered shared/_nav.erb (Duration: 57.2ms | Allocations: 488580)
+Completed 200 OK in 302ms (Views: 251.0ms | ActiveRecord: 3.4ms | Allocations: 2911105)
+
+

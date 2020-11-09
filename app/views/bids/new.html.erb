@@ -1,2 +1,13 @@
-<h1>Bids#new</h1>
-<p>Find me in app/views/bids/new.html.erb</p>
+<h1>Place your bid!</h1>
+<%= render partial: '/shared/errors', locals: {object: @bid} %>
+<h2>Name: <%= link_to @item.name, item_path(@item) %></h2>
+<h3>Description: <%= @item.description %></h3>
+<h3>Asking Price: <%= @item.asking_price %></h3>
+<h3>End Date: <%= @item.end_date %></h3>
+<%= form_for @bid, method: :post do |f| %>
+    <%= f.label :bid_amount,"Place Bid:" %>
+    <%= f.number_field :bid_amount %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.hidden_field :item_id, value: @item.id %>
+    <%= f.submit %>
+<% end %>

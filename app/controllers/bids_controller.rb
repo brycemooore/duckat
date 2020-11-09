@@ -6,10 +6,12 @@ class BidsController < ApplicationController
   def show
     @bid = Bid.find(params[:id])
     @item = Item.find @bid.item_id
+
   end
 
   def new
     @bid = Bid.new
+    @item = Item.find(params[:item_id])
   end
 
   def create
@@ -17,7 +19,7 @@ class BidsController < ApplicationController
     if @bid.save
       redirect_to bid_path(@bid)
     else
-      redirect_to item_path(@bid.item_id)
+      redirect_to new_bid_path(item_id: @bid.item_id)
     end
   end
 

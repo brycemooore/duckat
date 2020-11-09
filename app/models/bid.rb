@@ -3,6 +3,7 @@ class Bid < ApplicationRecord
     belongs_to :user 
     belongs_to :item
     validate :valid_bid
+    validates :bid_amount, presence: true
 
     private
     def valid_bid
