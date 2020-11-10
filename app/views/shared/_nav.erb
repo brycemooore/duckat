@@ -7,6 +7,7 @@
         <%= link_to "Profile", user_path(current_user.id) %> |
         <%= link_to "Logout", logout_path, method: 'post' %> | 
         <%= link_to "New Item", new_item_path %> |
-        <%= link_to "Your Bids", bids_path %> 
+        <%= link_to "Your Bids", bids_path %> |
+        <%= link_to "Duck Stats", stats_path(current_user.id) %> 
     <% end %>
 </nav> 

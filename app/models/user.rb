@@ -1,7 +1,7 @@
 class User < ApplicationRecord
 
     has_many :items, foreign_key: 'seller_id', class_name: 'Item'
-    has_many :bids, foreign_key: 'bidder_id', class_name: 'Bid'
+    has_many :bids, foreign_key: 'user_id'
     has_many :bidded_items, through: :bids, source: :item
 
     # before_create :default_values
@@ -19,6 +19,30 @@ class User < ApplicationRecord
     def make_bid(item, amount)
         Bid.create(user_id: self.id, item_id: item.id, bid_amount: amount)
     end 
+
+    def sorted_bids_asc
+        self.bids.sort { |b| b.bid_amount }
+    end
+
+    def my_highest_bid
+        self.sorted_bids_asc[-1]
+    end
+
+    def total_bid
+        self.sorted_bids_asc.map do |bid|
+            bid.bid_amount
+        end.reduce(:+)
+    end
+
+    def items_sorted_by_price
+        self.items.sort { |item| item.asking_price }
+    end
+
+    def most_bids_on_item
+        self.items.sort do |item| 
+            item.bids.count 
+        end[-1]
+    end
 
     private
     def default_values

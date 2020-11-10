@@ -17,7 +17,7 @@ class Bid < ApplicationRecord
         if self.bid_amount.to_f <= @item.asking_price
             self.errors.add(:bid_amount, ' must be above highest bid.')
             return false
-        elsif User.find(@item.seller_id).balance < self.bid_amount
+        elsif User.find(self.user_id).balance < self.bid_amount
             self.errors.add(:bid_amount, ' is greater than available balance.')
             return false
         else
