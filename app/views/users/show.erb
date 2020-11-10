@@ -1,6 +1,12 @@
 <h1>Hey there <%= @user.username %></h1>
-<h3>Your account balance is: <%= @user.balance %></h3>
-<h3>Your ducks on the market</h3>
+<h3>Your account balance is: $<%= @user.balance %>0</h3>
+<h5>Replenish balance
+<%= form_with url: update_balance_path(@user), method: 'get' do %>
+<%= number_field_tag :amount %>
+<%= submit_tag("Add Funds") %>
+<% end %>
+</h5>
+<h3>Your ducks on the market:</h3>
 <ul>
 <% @user.items.each do |item| %>
     <li><%= link_to item.name, item_path(item.id) %></li>

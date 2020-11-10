@@ -9,7 +9,6 @@ class BidsController < ApplicationController
   def show
     @bid = Bid.find(params[:id])
     @item = Item.find @bid.item_id
-
   end
 
   def new

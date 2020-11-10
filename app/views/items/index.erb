@@ -1,12 +1,12 @@
-<h1>Items</h1>
+<h1>Get Ducked</h1>
 <%= form_tag items_path, method: "GET" do %>
+    <%= submit_tag "Get your ducks in a row"%>&nbsp&nbsp&nbsp
     <%= label_tag :list, "All"%>
-    <%= radio_button_tag :list, "all"%>
+    <%= radio_button_tag :list, "all" %>
     <%= label_tag :list, "For Sale"%>
     <%= radio_button_tag :list, "sale"%>
-    <%= label_tag :list, "My Items For Sale"%>
+    <%= label_tag :list, "My Items For Sale"%> 
     <%= radio_button_tag :list, "selling"%>
-    <%= submit_tag "Display Items"%>
 <% end %><br>
 <div class="container-fluid">
 <div class="row flex-row flex-no-wrap row-horizon">

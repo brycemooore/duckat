@@ -17,6 +17,7 @@ class UsersController < ApplicationController
     end 
 
     def show
+        @user = User.find(params[:id])
     end 
 
     def edit
@@ -34,6 +35,14 @@ class UsersController < ApplicationController
         @user.delete
         redirect_to home_path
     end 
+
+    def update_balance
+        @user = User.find(params[:id])
+        @user.balance = @user.balance + params[:amount].to_f
+        @user.save
+        byebug
+        redirect_to user_path(@user)
+    end
 
     private 
     def set_user
