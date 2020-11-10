@@ -29,7 +29,11 @@ class ItemsController < ApplicationController
     end
 
     def create
+        # byebug
         @item = Item.new(item_params)
+        item_params[:tags_attributes].each do |key, value|
+            @item.tags << Tag.find_or_initialize_by(name: value["name"])
+        end 
         if @item.save
             redirect_to item_path(@item)
         else
@@ -41,8 +45,14 @@ class ItemsController < ApplicationController
     end
 
     def update
-        @item.update(item_params)
-        redirect_to item_path(@item)
+        item_params[:tags_attributes].each do |tag|
+            @item.tags << Tag.find_or_initialize_by(item_params[:tag_attributes])
+        end 
+        if @item.update(item_params)
+            redirect_to item_path(@item)
+        else 
+            render :edit
+        end 
     end
 
     def destroy

@@ -6,6 +6,7 @@ class Tag < ApplicationRecord
 
     before_save :downcase_name
 
+    private 
     def downcase_name
         self.name.downcase!
     end 
