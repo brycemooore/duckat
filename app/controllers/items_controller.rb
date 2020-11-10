@@ -1,25 +1,31 @@
 class ItemsController < ApplicationController
 
     before_action :require_login, only: [:show, :new, :create, :edit, :update, :destroy]
+    before_action :set_item, only: [:show, :edit, :update, :destroy]
     
     def index
-        case params[:list]
-        when "sale"
-            @items = Item.where.not seller_id: current_user.id
-        when "selling"
-            @items = Item.where seller_id: current_user.id
+        if params[:tag_sort].present?
+            @items = Item.joins(:tags).where(tags: {name: params[:tag_sort]})
         else
-            @items = Item.all
-        end
+            case params[:list]
+            when "sale"
+                @items = Item.where.not seller_id: current_user.id
+            when "selling"
+                @items = Item.where seller_id: current_user.id
+            else
+                @items = Item.all
+            end
+        end 
     end
 
     def show
-        @item = Item.find(params[:id])
         @bid = Bid.new
     end
 
     def new
         @item = Item.new
+        @item.tags.build
+        @item.tags.build
     end
 
     def create
@@ -32,19 +38,23 @@ class ItemsController < ApplicationController
     end
 
     def edit
-        @item = Item.find(params[:id])
     end
 
     def update
-        @item = Item.find(params[:id])
         @item.update(item_params)
         redirect_to item_path(@item)
     end
 
     def destroy
+        @item.delete
+        redirect_to items_path
     end
 
     private 
+
+    def set_item
+        @item = Item.find(params[:id])
+    end 
 
     def item_params
         params.require(:item).permit(
@@ -53,7 +63,10 @@ class ItemsController < ApplicationController
             :seller_id,
             :asking_price,
             :end_date,
-            :image
+            :image,
+            tags_attributes: [
+                :name
+            ]
         )
     end
 

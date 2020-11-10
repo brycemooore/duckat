@@ -14,6 +14,8 @@ class Item < ApplicationRecord
 
     before_save :default_desc
 
+    accepts_nested_attributes_for :tags 
+
     
 
     def display_asking_price

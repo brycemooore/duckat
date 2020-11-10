@@ -11,6 +11,7 @@
 <h3>
     <% if @item.seller_id == current_user.id  %>
         <%= link_to "Edit your item for sale.", edit_item_path(@item) %>
+        <%= link_to "Delete your item for sale.", item_path(@item), method: 'delete' %>
     <% else %>
         <%= link_to "Place Bid", new_bid_path(item_id: @item.id) %>
     <% end %> 
@@ -19,6 +20,6 @@
 <% if @item.tags.any? %>
     <h2>Tags</h2>
     <% @item.tags.each do |tag| %>
-        <%= tag.name %>
+        <%=link_to tag.name, items_path(tag_sort: tag.name)%>
     <% end %>
 <% end %>
