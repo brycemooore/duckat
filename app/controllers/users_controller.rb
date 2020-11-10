@@ -40,7 +40,7 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
         @user.balance += params[:amount].to_f
         @user.save
-        redirect_to user_path(@user)
+        redirect_to user_path(@user.id)
     end
 
     private 

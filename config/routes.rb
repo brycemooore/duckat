@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :items
   resources :bids, only: [:index, :show, :new, :create, :destroy]
   
-  get '/users/:id/balance', to: 'users#update_balance', as: 'update_balance'
+  patch '/users/:id/balance', to: 'users#update_balance', as: 'update_balance'
   get '/', to: 'application#home', as: 'home'
   get '/login', to: 'sessions#new', as: 'login_form'
   post '/login', to: 'sessions#create', as: 'login'
