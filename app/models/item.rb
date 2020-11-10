@@ -17,12 +17,16 @@ class Item < ApplicationRecord
     accepts_nested_attributes_for :tags 
 
     
-
     def display_asking_price
         if self.asking_price == 0
             return "Free"
         end
     return self.asking_price
+    end 
+
+    def current_highest_bid
+      return 0 unless self.bids.any?
+      return self.bids.maximum(:bid_amount)
     end 
 
     def sorted_bids
