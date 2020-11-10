@@ -4,7 +4,8 @@ class User < ApplicationRecord
     has_many :bids, foreign_key: 'bidder_id', class_name: 'Bid'
     has_many :bidded_items, through: :bids, source: :item
 
-    before_save :default_values, :round_balance
+    # before_create :default_values
+    before_save :round_balance
 
     validates :username, uniqueness: true, presence: true
 

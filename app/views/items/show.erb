@@ -1,4 +1,4 @@
-    <%= image_tag @item.image || "https://media.istockphoto.com/photos/rubber-duck-picture-id476147637?k=6&m=476147637&s=612x612&w=0&h=AkhVVp-iQHgQmC9ullv78kYYRDHvPi6QOv8jZFwCRKo=",
+    <%= image_tag @item.image.present? ? @item.image : Item.default_pic,
     style: 'height: 200px;width: 200px;' %>
 <h2>Name: <%= @item.name %></h2>
 <h2>Description: <%= @item.description %></h2>
@@ -9,7 +9,7 @@
         <%= link_to "Edit your item for sale.", edit_item_path(@item) %>
         <%= link_to "Delete your item for sale.", item_path(@item), method: 'delete' %>
     <% elsif @item.end_date < Time.now %>
-        <img src="https://1.bp.blogspot.com/_9g2caaQ2kgA/TGRjL0ND6sI/AAAAAAAACis/W1K8eilisIo/s320/duck.jpg" style="width:200px;height:200px;"><br><br><span class="alert alert-danger">This item is no longer for sale so you can duck off.</span>
+        <img src= <%= Item.no_longer_for_sale %> style="width:200px;height:200px;"><br><br><span class="alert alert-danger">This item is no longer for sale so you can duck off.</span>
     <% else %>
         <%= link_to "Place Bid", new_bid_path(item_id: @item.id) %>
     <% end %> 
@@ -20,4 +20,13 @@
     <% @item.tags.each do |tag| %>
         <%=link_to tag.name, items_path(tag_sort: tag.name)%>
     <% end %>
+<% end %>
+
+<% if @item.seller_id == session[:user_id] && @item.bids.any? %>
+    <h3>Your bids on this duck:</h3>
+    <ul>
+    <% @item.sorted_bids.each do |bid| %>
+        <li><%= link_to "#{User.find(bid.user_id).username}: #{bid.bid_amount}" %></li>
+    <% end %>
+    </ul>
 <% end %>

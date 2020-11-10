@@ -38,9 +38,8 @@ class UsersController < ApplicationController
 
     def update_balance
         @user = User.find(params[:id])
-        @user.balance = @user.balance + params[:amount].to_f
+        @user.balance += params[:amount].to_f
         @user.save
-        byebug
         redirect_to user_path(@user)
     end
 
@@ -50,6 +49,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-        params.require(:user).permit(:username, :password, :password_confirmation)
+        params.require(:user).permit(:username, :password, :password_confirmation, :balance)
     end 
 end

@@ -72,5 +72,5 @@ class ItemsController < ApplicationController
 
     def require_login
         return head(:forbidden) unless logged_in?
-      end
+    end
 end

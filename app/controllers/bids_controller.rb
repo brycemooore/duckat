@@ -2,6 +2,7 @@ class BidsController < ApplicationController
 
   before_action :require_login, only: [:show, :new, :create]
 
+
   def index
     @bids = Bid.where user_id: current_user.id
   end
@@ -18,10 +19,13 @@ class BidsController < ApplicationController
 
   def create
     @bid = Bid.new(bid_params)
+    @item = Item.find(@bid.item_id)
     if @bid.save
       redirect_to bid_path(@bid)
+      @item.asking_price = @bid.bid_amount
+      @item.save
     else
-      redirect_to new_bid_path(item_id: @bid.item_id)
+      render :new
     end
   end
 

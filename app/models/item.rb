@@ -25,6 +25,10 @@ class Item < ApplicationRecord
     return self.asking_price
     end 
 
+    def sorted_bids
+      self.bids.sort { |a| a.bid_amount }
+    end
+
     private
 
     def valid_asking_price
@@ -44,4 +48,13 @@ class Item < ApplicationRecord
           errors.add(:end_date, "must at least be tomorrow")
         end
       end    
+
+      def self.default_pic
+        return "https://media.istockphoto.com/photos/rubber-duck-picture-id476147637?k=6&m=476147637&s=612x612&w=0&h=AkhVVp-iQHgQmC9ullv78kYYRDHvPi6QOv8jZFwCRKo="
+      end
+
+      def self.no_longer_for_sale
+        "https://1.bp.blogspot.com/_9g2caaQ2kgA/TGRjL0ND6sI/AAAAAAAACis/W1K8eilisIo/s320/duck.jpg"
+      end
+
 end 
