@@ -22,8 +22,6 @@ class BidsController < ApplicationController
     @item = Item.find(@bid.item_id)
     if @bid.save
       redirect_to bid_path(@bid)
-      @item.asking_price = @bid.bid_amount
-      @item.save
     else
       render :new
     end

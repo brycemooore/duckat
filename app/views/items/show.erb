@@ -4,7 +4,11 @@
 <h2>Name: <%= @item.name %></h2>
 <h2>Description: <%= @item.description %></h2>
 <h2>Asking Price: <%= number_to_currency @item.asking_price %></h2>
-<h2>Current Highest Bid: <%= number_to_currency @item.current_highest_bid %></h2>
+<% if @item.bids.any? %>
+    <h2>Current Highest Bid: <%= number_to_currency @item.current_highest_bid.bid_amount %></h2>
+<% else %>
+    <h2>No bids :( </h2>
+<% end %>
 <h2>Auction Closes: <%= @item.end_date %></h2><br>
 =======
 <div class="card mb-3" style="max-width: 540px;">
@@ -28,7 +32,7 @@
         <%= link_to "Edit your item for sale.", edit_item_path(@item) %>
         <%= link_to "Delete your item for sale.", item_path(@item), method: 'delete' %>
         <%= link_to "Not enough interest? Add some tags!", new_tag_path(item_id: @item.id) %>
-    <% elsif @item.end_date < Time.now %>
+    <% elsif @item.auction_ended? %>
         <br><br><span class="alert alert-danger">This item is no longer for sale so you can duck off.</span>
     <% else %>
         <%= link_to "Place Bid", new_bid_path(item_id: @item.id) %>
