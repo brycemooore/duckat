@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :new, :create, :edit, :update, :destroy]
   resources :items
   resources :bids, only: [:index, :show, :new, :create, :destroy]
-  resources :comments, only:[:new, :create]
+  resources :comments, :tags, only:[:new, :create]
   
   patch '/users/:id/balance', to: 'users#update_balance', as: 'update_balance'
   get '/users/:id/stats', to: 'users#stats', as: 'stats'
