@@ -2,6 +2,9 @@ class UsersController < ApplicationController
 
     before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+    def transaction
+    end 
+
     def new
         @user = User.new
     end 
@@ -18,6 +21,11 @@ class UsersController < ApplicationController
 
     def show
         @user = User.find(params[:id])
+        if params[:accepted].present?
+            @bid_accepted = params[:accepted].
+        else
+            @bid_accepted = 'false'
+        end 
     end 
 
     def edit

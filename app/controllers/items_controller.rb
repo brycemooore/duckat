@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
 
     before_action :require_login, only: [:show, :new, :create, :edit, :update, :destroy]
-    before_action :set_item, only: [:show, :edit, :update, :destroy]
+    before_action :set_item, only: [:show, :edit, :update, :destroy, :transaction]
 
     def index
         if params[:tag_sort].present?
@@ -53,6 +53,10 @@ class ItemsController < ApplicationController
     def destroy
         @item.delete
         redirect_to items_path
+    end
+
+    def transaction
+        @item.transaction
     end
 
     private 

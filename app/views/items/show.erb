@@ -25,9 +25,9 @@
         <%= link_to "Edit your item for sale.", edit_item_path(@item) %>
         <%= link_to "Delete your item for sale.", item_path(@item), method: 'delete' %>
         <%= link_to "Not enough interest? Add some tags!", new_tag_path(item_id: @item.id) %>
-    <% elsif @item.auction_ended? %>
+        <% elsif @item.auction_ended? %>
         <br><br><span class="alert alert-danger">This item is no longer for sale so you can duck off.</span>
-    <% else %>
+        <% else %>
         <%= link_to "Place Bid", new_bid_path(item_id: @item.id) %>
         <%= link_to "Leave Comment", new_comment_path(item_id: @item.id )%>
     <% end %> 
@@ -52,7 +52,7 @@
     <h3>Bids on your duck:</h3>
     <ul>
     <% @item.sorted_bids.each do |bid| %>
-        <li><%= link_to "#{User.find(bid.user_id).username}: #{bid.bid_amount}" %></li>
+        <li><%= link_to "#{User.find(bid.user_id).username}: #{number_to_currency bid.bid_amount}" %></li>
     <% end %>
     </ul>
 <% end %>
