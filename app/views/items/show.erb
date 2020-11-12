@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
     <%= image_tag @item.image.present? ? @item.image : Item.default_pic,
     style: 'height: 200px;width: 200px;' %>
 <h2>Name: <%= @item.name %></h2>
@@ -20,13 +20,17 @@
       <div class="card-body">
         <h5 class="card-title"><%= @item.name %></h5>
         <p class="card-text"><%= @item.description %></p>
+        <% if @item.bids.any? %>
         <p class="card-text">Current highest bid: $<%= @item.current_highest_bid %>0 <br><small>Starting bid: $<%= @item.asking_price %>0</small></p>
+<% else %>
+<p class="card-text">No bids :( <br><small>Starting bid: $<%= @item.asking_price %>0</small></p>
+<% end %>
         <p class="card-text"><small class="text-muted">End date: <%= @item.end_date %></small></p>
       </div>
     </div>
   </div>
 </div>
->>>>>>> styling
+
 <h3>
     <% if @item.seller_id == current_user.id  %>
         <%= link_to "Edit your item for sale.", edit_item_path(@item) %>
