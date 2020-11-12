@@ -1,4 +1,4 @@
-<h1>Hey there <%= @user.username %></h1>
+<h1>Hey there, <%= @user.username %>!</h1>
 <h3>Your account balance is: $<%= @user.balance %>0</h3>
 <h5>Replenish balance
 <%= form_with url: update_balance_path(@user), method: 'patch' do %>
