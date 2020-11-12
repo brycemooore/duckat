@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new', as: 'login_form'
   post '/login', to: 'sessions#create', as: 'login'
   post '/logout', to: 'sessions#destroy', as: 'logout'
-
+  get '/items/:id/transaction', to: 'items#transaction', as: 'trans'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

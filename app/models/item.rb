@@ -19,6 +19,14 @@ class Item < ApplicationRecord
 
     accepts_nested_attributes_for :tags 
 
+    attr_accessor :bid_accepted
+
+    def initialize(*args)
+      super(*args)
+      @bid_accepted = false
+    end 
+
+
     def display_asking_price
         if self.asking_price == 0
             return "Free"
@@ -45,15 +53,16 @@ class Item < ApplicationRecord
       end
     end 
 
-    def transaction
-      winner = self.auction_winner
-      self.seller.balance += self.current_highest_bid.bid_amount
-      winner.balance -= self.current_highest_bid.bid_amount
-      self.seller.save 
-      winner.save 
+    def transaction(accepted = true)
+      if accepted == false
+        winner = self.auction_winner
+        self.seller.balance += self.current_highest_bid.bid_amount
+        winner.balance -= self.current_highest_bid.bid_amount
+        self.seller.save 
+        winner.save 
+      end 
     end 
-
-
+ 
     private
 
     def valid_asking_price

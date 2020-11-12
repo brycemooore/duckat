@@ -17,7 +17,11 @@
 <h3>The Ducks you have won:</h3>
     <ul class="list-group listwidth">
         <% @user.winning_items.each do |item| %>
-        <li class="list-group-item"><%= link_to item.name, item_path(item.id) %></li>
+        <li class="list-group-item">
+        <%= link_to item.name, item_path(item.id) %>
+        <% if @bid_accepted == 'false' %>
+            <%= link_to "accept", trans_path(item.id) %>
+        <% end %></li>
     <% end %>
 </ul>
 </div><br>
