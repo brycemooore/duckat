@@ -13,7 +13,13 @@
         <% @user.items.each do |item| %>
             <li class="list-group-item"><%= link_to item.name, item_path(item.id) %></li>
         <% end %>
-    </ul>
+    </ul><br>
+<h3>The Ducks you have won:</h3>
+    <ul class="list-group listwidth">
+        <% @user.winning_items.each do |item| %>
+        <li class="list-group-item"><%= link_to item.name, item_path(item.id) %></li>
+    <% end %>
+</ul>
 </div><br>
 <h3><%= link_to "Add Item", new_item_path %></h3>
 <h3><%= link_to "Edit yourself", edit_user_path(@user.id) %></h3>

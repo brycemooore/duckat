@@ -13,6 +13,13 @@ class User < ApplicationRecord
 
     has_secure_password
 
+    def winning_items
+        items = self.bidded_items
+        items.select do |item|
+            item.auction_winner == self
+        end 
+    end 
+    
     def add_item(name, desc, price, date, image)
         Item.create(seller_id: self.id, name: name, description: desc, asking_price: price, 
         end_date: date, image: image)

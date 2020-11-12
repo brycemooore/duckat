@@ -27,13 +27,32 @@ class Item < ApplicationRecord
     end 
 
     def current_highest_bid
-      return 0 unless self.bids.any?
-      return self.bids.maximum(:bid_amount)
+      return nil unless self.bids.any?
+      return self.bids.order("bid_amount DESC").first
     end 
 
     def sorted_bids
       self.bids.sort { |a| a.bid_amount }
     end
+
+    def auction_ended?
+      self.end_date < Time.now
+    end 
+
+    def auction_winner
+      if self.auction_ended?
+        return User.find(self.current_highest_bid.user_id)
+      end
+    end 
+
+    def transaction
+      winner = self.auction_winner
+      self.seller.balance += self.current_highest_bid.bid_amount
+      winner.balance -= self.current_highest_bid.bid_amount
+      self.seller.save 
+      winner.save 
+    end 
+
 
     private
 
@@ -55,12 +74,11 @@ class Item < ApplicationRecord
         end
       end    
 
-      def self.default_pic
-        return "https://media.istockphoto.com/photos/rubber-duck-picture-id476147637?k=6&m=476147637&s=612x612&w=0&h=AkhVVp-iQHgQmC9ullv78kYYRDHvPi6QOv8jZFwCRKo="
-      end
+    def self.default_pic
+      return "https://media.istockphoto.com/photos/rubber-duck-picture-id476147637?k=6&m=476147637&s=612x612&w=0&h=AkhVVp-iQHgQmC9ullv78kYYRDHvPi6QOv8jZFwCRKo="
+    end
 
-      def self.no_longer_for_sale
-        "https://1.bp.blogspot.com/_9g2caaQ2kgA/TGRjL0ND6sI/AAAAAAAACis/W1K8eilisIo/s320/duck.jpg"
-      end
-
-end 
+    def self.no_longer_for_sale
+      "https://1.bp.blogspot.com/_9g2caaQ2kgA/TGRjL0ND6sI/AAAAAAAACis/W1K8eilisIo/s320/duck.jpg"
+    end
+  end 

@@ -1,9 +1,13 @@
 <br>
 <h1>Your Bids</h1>
 <ul class="list-group listwidth">
+    <% if @bids.empty? %>
     <% @bids.each do |bid| %>
-        <li class="list-group-item"><%= link_to "#{Item.find(bid.item_id).name} - $#{bid.bid_amount}",
+        <li class="list-group-item"><%= link_to "#{Item.find(bid.item_id).name} - $#{number_to_currency bid.bid_amount}",
         bid_path(bid)
         %></li>
+    <% end %>
+    <% else %>
+        <h3>No bids :( >/h3>
     <% end %>
 </ul>
