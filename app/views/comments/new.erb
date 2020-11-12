@@ -1,0 +1,11 @@
+<h1><%=@item.name%></h1>
+<img src=<%=@item.image%> alt="Image of Duck">
+<h3><%=@item.description%></h3>
+<h3>Leave a comment</h3>
+<%= form_for @comment do |f| %>
+    <%= f.label :message %>
+    <%= f.text_area :message %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.hidden_field :item_id, value: @item.id%>
+    <%= f.submit "Leave Comment" %>
+<% end %>

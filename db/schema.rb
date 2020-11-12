@@ -10,12 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_09_172826) do
+ActiveRecord::Schema.define(version: 2020_11_12_154458) do
 
   create_table "bids", force: :cascade do |t|
     t.integer "user_id"
     t.integer "item_id"
     t.float "bid_amount"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "item_id"
+    t.string "message"
+    t.integer "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

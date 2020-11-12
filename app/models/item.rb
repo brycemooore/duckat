@@ -6,6 +6,9 @@ class Item < ApplicationRecord
 
     has_many :item_tags
     has_many :tags, through: :item_tags
+
+    has_many :comments
+    has_many :users, through: :comments 
     
     validates :name, :asking_price, :end_date,  presence: true
     validates :image, presence: false

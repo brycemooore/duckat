@@ -3,6 +3,8 @@ class User < ApplicationRecord
     has_many :items, foreign_key: 'seller_id', class_name: 'Item'
     has_many :bids, foreign_key: 'user_id'
     has_many :bidded_items, through: :bids, source: :item
+    has_many :comments
+    has_many :comment_items, through: :comments, source: :item
 
     # before_create :default_values
     before_save :round_balance

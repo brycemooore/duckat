@@ -13,8 +13,17 @@
         <img src= <%= Item.no_longer_for_sale %> style="width:200px;height:200px;"><br><br><span class="alert alert-danger">This item is no longer for sale so you can duck off.</span>
     <% else %>
         <%= link_to "Place Bid", new_bid_path(item_id: @item.id) %>
+        <%= link_to "Leave Comment", new_comment_path(item_id: @item.id )%>
     <% end %> 
 </h3>
+
+<% if @item.comments.any? %>
+    <h2>Comments</h2>
+    <div>% @item.comments.each do |comment| %>
+        <%=comment.message%>
+        by: <%=link_to User.find(comment.user_id).username, user_path(User.find(comment.user_id))%></div>
+    <% end %>
+<% end %>
 
 <% if @item.tags.any? %>
     <h2>Tags</h2>
