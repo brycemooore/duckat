@@ -1,6 +1,5 @@
 <br>
 <h1>Hey there, <%= @user.username %>!</h1><br>
-<<<<<<< HEAD
 <div class="container">
   <div class="row">
     <div class="col">
@@ -20,8 +19,6 @@
                     <li class="list-group-item"><%= link_to item.name, item_path(item.id) %></li>
                 <% end %>
             </ul><br>
-            
-
         </div><br>
     </div>
     <div class="col">
@@ -38,33 +35,3 @@
         <%= link_to "End it all please", user_path(@user.id), method: 'delete'%>
         </h3>
 
-=======
-<h3>Your account balance is: $<%= @user.balance %>0</h3><br>
-<h5>Replenish balance
-<%= form_with url: update_balance_path(@user), method: 'patch' do %>
-<%= number_field_tag :amount %>
-<%= submit_tag("Add Funds", :class => "btn btn-primary") %>
-<% end %>
-</h5><br>
-<h3>Your ducks on the market:</h3>
-<div>
-    <ul class="list-group listwidth">
-        <% @user.items.each do |item| %>
-            <li class="list-group-item"><%= link_to item.name, item_path(item.id) %></li>
-        <% end %>
-    </ul><br>
-<h3>The Ducks you have won:</h3>
-    <ul class="list-group listwidth">
-        <% @user.winning_items.each do |item| %>
-        <li class="list-group-item">
-        <%= link_to item.name, item_path(item.id) %>
-        <% if @bid_accepted == 'false' %>
-            <%= link_to "accept", trans_path(item.id) %>
-        <% end %></li>
-    <% end %>
-</ul>
-</div><br>
-<h3><%= link_to "Add Item", new_item_path %></h3>
-<h3><%= link_to "Edit yourself", edit_user_path(@user.id) %></h3>
-<h3><%= link_to "End it all please", user_path(@user.id), method: 'delete'%></h3>
->>>>>>> cbec7f0c3114013e9b60fffe2e2a31b37ffe72d6

@@ -1,7 +1,7 @@
 <br>
 <h1>Your Bids</h1>
 <ul class="list-group listwidth">
-    <% if @bids.empty? %>
+    <% if @bids.any? %>
     <% @bids.each do |bid| %>
         <li class="list-group-item"><%= link_to "#{Item.find(bid.item_id).name} - $#{number_to_currency bid.bid_amount}",
         bid_path(bid)

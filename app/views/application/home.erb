@@ -18,3 +18,11 @@
 </div>
 </div>
 </div>
+
+<footer>
+<p>Check out ducks by tags:</p>
+<% 5.times do %>
+<% sample = Tag.all.sample %>
+     <%= link_to sample.name, items_path(tag_sort: sample.name) %>    
+<% end %>
+</footer>
