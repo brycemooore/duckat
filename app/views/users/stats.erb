@@ -1,6 +1,6 @@
 <h1>Your personalized Duck stats</h1>
 <h3>Total bids: <%= @user.sorted_bids_asc.count %></h3>
-<h3>Highest bid: $<%= @user.my_highest_bid.bid_amount %>0</h3>
+<h3>Highest bid: <%= number_to_currency @user.my_highest_bid.bid_amount %></h3>
 <h3>All time number of ducks listed: <%= @user.items.count %></h3>
 <h3>Ducks by price:</h3>
 <ul>

@@ -2,8 +2,8 @@
     style: 'height: 200px;width: 200px;' %>
 <h2>Name: <%= @item.name %></h2>
 <h2>Description: <%= @item.description %></h2>
-<h2>Asking Price: $<%= @item.asking_price %>0</h2>
-<h2>Current Highest Bid: $<%= @item.current_highest_bid %></h2>
+<h2>Asking Price: <%= number_to_currency @item.asking_price %></h2>
+<h2>Current Highest Bid: <%= number_to_currency @item.current_highest_bid %></h2>
 <h2>Auction Closes: <%= @item.end_date %></h2><br>
 <h3>
     <% if @item.seller_id == current_user.id  %>
