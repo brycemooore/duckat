@@ -88,6 +88,34 @@ HTML CSSResult EDIT ON .whole {
     width: 30%;
 }
 
-header {
-    background-color: aqua;
+html,
+body {
+    background-image: linear-gradient(to right, aqua, skyblue);
+    height: 100%;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.center {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div.container {
+    height: 100%;
+    background-color: white;
+}
+
+.container-xl {
+    background-color: white;
+    height: 100%;
+}
+
+.container-l {
+    height: auto;
+    background-color: white;
 }

@@ -1,5 +1,5 @@
 
-
+<br>
 <div class="card mb-3" style="max-width: 540px;">
   <div class="row no-gutters">
     <div class="col-md-4">
@@ -10,9 +10,9 @@
         <h5 class="card-title"><%= @item.name %></h5>
         <p class="card-text"><%= @item.description %></p>
         <% if @item.bids.any? %>
-        <p class="card-text">Current highest bid: $<%= @item.current_highest_bid %>0 <br><small>Starting bid: $<%= @item.asking_price %>0</small></p>
+        <p class="card-text">Current highest bid: <%= number_to_currency @item.current_highest_bid.bid_amount %> <br><small>Starting bid: <%= number_to_currency @item.asking_price %></small></p>
 <% else %>
-<p class="card-text">No bids :( <br><small>Starting bid: $<%= @item.asking_price %>0</small></p>
+<p class="card-text">No bids :( <br><small>Starting bid: <%= number_to_currency @item.asking_price %></small></p>
 <% end %>
         <p class="card-text"><small class="text-muted">End date: <%= @item.end_date %></small></p>
       </div>
