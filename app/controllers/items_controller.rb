@@ -19,6 +19,7 @@ class ItemsController < ApplicationController
     end
 
     def show
+        cookies[:last_visited_item_id] = @item.id
         @bid = Bid.new
     end
 

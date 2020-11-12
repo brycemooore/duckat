@@ -9,6 +9,7 @@
     <% if @item.seller_id == current_user.id  %>
         <%= link_to "Edit your item for sale.", edit_item_path(@item) %>
         <%= link_to "Delete your item for sale.", item_path(@item), method: 'delete' %>
+        <%= link_to "Not enough interest? Add some tags!", new_tag_path(item_id: @item.id) %>
     <% elsif @item.end_date < Time.now %>
         <img src= <%= Item.no_longer_for_sale %> style="width:200px;height:200px;"><br><br><span class="alert alert-danger">This item is no longer for sale so you can duck off.</span>
     <% else %>
@@ -19,7 +20,7 @@
 
 <% if @item.comments.any? %>
     <h2>Comments</h2>
-    <div>% @item.comments.each do |comment| %>
+    <div><% @item.comments.each do |comment| %>
         <%=comment.message%>
         by: <%=link_to User.find(comment.user_id).username, user_path(User.find(comment.user_id))%></div>
     <% end %>
@@ -33,7 +34,7 @@
 <% end %>
 
 <% if @item.seller_id == session[:user_id] && @item.bids.any? %>
-    <h3>Your bids on this duck:</h3>
+    <h3>Bids on your duck:</h3>
     <ul>
     <% @item.sorted_bids.each do |bid| %>
         <li><%= link_to "#{User.find(bid.user_id).username}: #{bid.bid_amount}" %></li>
