@@ -1,3 +1,4 @@
+<br>
 <h1>Login</h1>
 
 <%=form_tag login_path do %>
@@ -6,5 +7,5 @@
     <%= text_field_tag :username %>
     <%= f.password_field :password %>
     <%= f.password_field :password_confirmation %>
-    <%= submit_tag "Login" %>
+    <%= submit_tag "Login", :class => "btn btn-primary" %>
 <% end %>

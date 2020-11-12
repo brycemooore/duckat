@@ -1,6 +1,6 @@
 <br><h1>Get Ducked</h1>
 <%= form_tag items_path, method: "GET" do %>
-    <%= submit_tag "Get your ducks in a row"%>&nbsp&nbsp&nbsp
+    <%= submit_tag "Get your ducks in a row", :class => "btn btn-primary"%>&nbsp&nbsp&nbsp
     <%= radio_button_tag :list, "all" %>
     <%= label_tag :list, "All"%>
     <%= radio_button_tag :list, "sale"%>

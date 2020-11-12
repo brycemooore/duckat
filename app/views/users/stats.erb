@@ -1,11 +1,12 @@
-<h1>Your personalized Duck stats</h1>
-<h3>Total bids: <%= @user.sorted_bids_asc.count %></h3>
-<h3>Highest bid: <%= number_to_currency @user.my_highest_bid.bid_amount %></h3>
-<h3>All time number of ducks listed: <%= @user.items.count %></h3>
+<br>
+<h1>Your personalized Duck stats</h1><br>
+<h3>Total bids: <%= @user.sorted_bids_asc.count %></h3><br>
+<h3>Highest bid: <%= number_to_currency @user.my_highest_bid.bid_amount %></h3><br>
+<h3>All time number of ducks listed: <%= @user.items.count %></h3><br>
+<h3>Most number of bids on one duck: <%= @user.most_bids_on_item.bids.count %></h3><br>
 <h3>Ducks by price:</h3>
-<ul>
+<ul class="list-group listwidth">
     <% @user.items_sorted_by_price.each do |item| %>
-        <li><%= "#{item.name}: #{item.asking_price}" %></li>
+        <li class="list-group-item"><%= "#{item.name}: $#{item.asking_price}0" %></li>
     <% end %>
 </ul>
-<h3>Most number of bids on one duck: <%= @user.most_bids_on_item.bids.count %></h3>

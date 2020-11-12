@@ -37,11 +37,11 @@ class User < ApplicationRecord
     end
 
     def items_sorted_by_price
-        self.items.sort { |item| item.asking_price }
+        self.items.sort_by { |item| item.asking_price }.reverse
     end
 
     def most_bids_on_item
-        self.items.sort do |item| 
+        self.items.sort_by do |item| 
             item.bids.count 
         end[-1]
     end

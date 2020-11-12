@@ -1,3 +1,4 @@
+<br>
 <h1>Login</h1>
 
 <% if params["failed_to_find_user"] %>
@@ -9,7 +10,7 @@
     <%= text_field_tag :username %>
     <%= label_tag :password %>
     <%= password_field_tag :password %>
-    <%= submit_tag "Login" %>
-<% end %>
+    <%= submit_tag "Login", :class => "btn btn-primary" %>
+<% end %><br>
 
 <h2> <%= link_to 'Dont have an account? Sign up!', new_user_path %> </h2>

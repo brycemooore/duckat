@@ -1,7 +1,8 @@
+<br>
 <h1>Your Bids</h1>
-<ul>
+<ul class="list-group listwidth">
     <% @bids.each do |bid| %>
-        <li><%= link_to "#{Item.find(bid.item_id).name} - $#{bid.bid_amount}",
+        <li class="list-group-item"><%= link_to "#{Item.find(bid.item_id).name} - $#{bid.bid_amount}",
         bid_path(bid)
         %></li>
     <% end %>
