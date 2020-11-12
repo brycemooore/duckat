@@ -45,6 +45,7 @@ class User < ApplicationRecord
     end
 
     private
+    
     def default_values
         self.balance = 0.00
     end 
