@@ -1,16 +1,24 @@
-    <%= image_tag @item.image.present? ? @item.image : Item.default_pic,
-    style: 'height: 200px;width: 200px;' %>
-<h2>Name: <%= @item.name %></h2>
-<h2>Description: <%= @item.description %></h2>
-<h2>Asking Price: $<%= @item.asking_price %>0</h2>
-<h2>Current Highest Bid: $<%= @item.current_highest_bid %></h2>
-<h2>Auction Closes: <%= @item.end_date %></h2><br>
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src=<%= @item.image.present? ? @item.image : Item.default_pic %> class="card-img" style="height: 200px; width: 200px;">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><%= @item.name %></h5>
+        <p class="card-text"><%= @item.description %></p>
+        <p class="card-text">Current highest bid: $<%= @item.current_highest_bid %>0 <br><small>Starting bid: $<%= @item.asking_price %>0</small></p>
+        <p class="card-text"><small class="text-muted">End date: <%= @item.end_date %></small></p>
+      </div>
+    </div>
+  </div>
+</div>
 <h3>
     <% if @item.seller_id == current_user.id  %>
         <%= link_to "Edit your item for sale.", edit_item_path(@item) %>
         <%= link_to "Delete your item for sale.", item_path(@item), method: 'delete' %>
     <% elsif @item.end_date < Time.now %>
-        <img src= <%= Item.no_longer_for_sale %> style="width:200px;height:200px;"><br><br><span class="alert alert-danger">This item is no longer for sale so you can duck off.</span>
+        <br><br><span class="alert alert-danger">This item is no longer for sale so you can duck off.</span>
     <% else %>
         <%= link_to "Place Bid", new_bid_path(item_id: @item.id) %>
         <%= link_to "Leave Comment", new_comment_path(item_id: @item.id )%>
@@ -19,7 +27,7 @@
 
 <% if @item.comments.any? %>
     <h2>Comments</h2>
-    <div>% @item.comments.each do |comment| %>
+    <div><% @item.comments.each do |comment| %>
         <%=comment.message%>
         by: <%=link_to User.find(comment.user_id).username, user_path(User.find(comment.user_id))%></div>
     <% end %>

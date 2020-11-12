@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
 
     before_action :require_login, only: [:show, :new, :create, :edit, :update, :destroy]
     before_action :set_item, only: [:show, :edit, :update, :destroy]
-    
+
     def index
         if params[:tag_sort].present?
             @items = Item.joins(:tags).where(tags: {name: params[:tag_sort]})
@@ -12,6 +12,10 @@ class ItemsController < ApplicationController
                 @items = Item.where.not seller_id: current_user.id
             when "selling"
                 @items = Item.where seller_id: current_user.id
+            when "price h-l"
+                @items = (Item.where.not seller_id: current_user.id).sort_by { |d| d.asking_price}.reverse
+            when "price l-h"
+                @items = (Item.where.not seller_id: current_user.id).sort_by { |d| d.asking_price}
             else
                 @items = Item.all
             end

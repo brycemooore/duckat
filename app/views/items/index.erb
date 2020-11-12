@@ -1,4 +1,4 @@
-<h1>Get Ducked</h1>
+<br><h1>Get Ducked</h1>
 <%= form_tag items_path, method: "GET" do %>
     <%= submit_tag "Get your ducks in a row"%>&nbsp&nbsp&nbsp
     <%= radio_button_tag :list, "all" %>
@@ -7,15 +7,20 @@
     <%= label_tag :list, "For Sale"%>
     <%= radio_button_tag :list, "selling"%>
     <%= label_tag :list, "My Items For Sale"%> 
+    <%= radio_button_tag :list, "price h-l"%>
+    <%= label_tag :list, "Price H-L"%> 
+    <%= radio_button_tag :list, "price l-h"%>
+    <%= label_tag :list, "Price L-H"%> 
 <% end %><br>
 <div class="container-fluid">
 <div class="row flex-row flex-no-wrap row-horizon">
 <% @items.each do |item| %>
-    <div class="col mb-4">
+    <div class="col mb-4"><br>
             <div class="card-deck card" style="width: 18rem;">
                 <a href=<%=item_path(item.id)%>><img src=<%= item.image.present? ? item.image : Item.default_pic %> class="card-img-top" alt="..."></a>
                 <div class="card-body">
                     <p class="card-text"><%=item.description%></p>
+                    <p class="card-text">$<%=item.asking_price%>0</p>
                 </div>
             </div>
             </div>
