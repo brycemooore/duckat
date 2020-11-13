@@ -1,3 +1,5 @@
-<h1><%= "Your Bid For #{@item.name}" %></h1>
+<br>
+<h1 class="bid-link"><%= link_to "Your Bid For #{@item.name}", item_path(@item) %></h1>
+<%= image_tag @item.image, class: "display-img" %><br><br>
 <h2>Amount: $<%= @bid.bid_amount %>0</h2>
 <h2>Auction end date: <%= @item.end_date %></h2>

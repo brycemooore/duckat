@@ -18,28 +18,35 @@
       </div>
     </div>
   </div>
-</div>
+</div><br>
 
 <h3>
     <% if @item.seller_id == current_user.id  %>
-        <%= link_to "Edit your item for sale.", edit_item_path(@item) %>
-        <%= link_to "Delete your item for sale.", item_path(@item), method: 'delete' %>
+        <%= link_to "Edit your item for sale.", edit_item_path(@item) %><br><br>
+        <%= link_to "Delete your item for sale.", item_path(@item), method: 'delete' %><br><br>
         <%= link_to "Not enough interest? Add some tags!", new_tag_path(item_id: @item.id) %>
         <% elsif @item.auction_ended? %>
         <br><br><span class="alert alert-danger">This item is no longer for sale so you can duck off.</span>
         <% else %>
-        <%= link_to "Place Bid", new_bid_path(item_id: @item.id) %>
+        <%= link_to "Place Bid", new_bid_path(item_id: @item.id) %> - 
         <%= link_to "Leave Comment", new_comment_path(item_id: @item.id )%>
     <% end %> 
 </h3>
 
 <% if @item.comments.any? %>
+<div class="comments">
     <h2>Comments</h2>
     <div><% @item.comments.each do |comment| %>
-        <%=comment.message%>
-        by: <%=link_to User.find(comment.user_id).username, user_path(User.find(comment.user_id))%></div>
+        <div class="card text-center" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title"><%=comment.message%></h5>
+            <p class="card-text">        By: <%=link_to User.find(comment.user_id).username, user_path(User.find(comment.user_id))%></p>
+          </div>
+        </div>        
+</div>
     <% end %>
 <% end %>
+</div>
 
 <% if @item.tags.any? %>
     <h2>Tags</h2>
