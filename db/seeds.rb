@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 def time_rand
-    Time.at(rand * Time.now.to_i)
+    Time.new(2020, rand(11..12), rand(14..30)) 
 end
 
 duck_images = ['https://cdn.shopify.com/s/files/1/0030/4227/9494/products/mgs-solid-snake-tubbz-gs-01_800x.progressive.jpg?v=1592352398',
@@ -22,9 +22,13 @@ duck_images = ['https://cdn.shopify.com/s/files/1/0030/4227/9494/products/mgs-so
 
 User.destroy_all
 Item.destroy_all
+Bid.destroy_all
+Tag.destroy_all
+Comment.destroy_all
+ItemTag.destroy_all
 
 20.times do
-    u = User.create(username: Faker::Artist.unique.name, password: 'adminpass')
+    u = User.create(username: Faker::Artist.unique.name, password: 'adminpass', balance: 0)
     rand(2..4).times do
         u.add_item(Faker::Space.company + " Duck", Faker::GreekPhilosophers.quote, rand(5..30).to_f, time_rand, duck_images.sample)
     end 

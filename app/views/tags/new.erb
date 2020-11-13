@@ -1,5 +1,5 @@
 <h1><%=@item.name%></h1>
-<img src=<%=@item.image%> alt="Duck image">
+<img src=<%=@item.image%> alt="Duck image" style="width:200px;height:200px;">
 <h3><%=@item.description%></h3>
 <%= form_for @tag do |f| %>
     <%=f.label :name %>

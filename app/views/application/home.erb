@@ -21,8 +21,10 @@
 
 <footer>
 <p>Check out ducks by tags:</p>
+<% if Tag.all.any? %>
 <% 5.times do %>
 <% sample = Tag.all.sample %>
      <%= link_to sample.name, items_path(tag_sort: sample.name) %>    
+<% end %>
 <% end %>
 </footer>
